@@ -40,7 +40,7 @@
     <elementParameter xmi:id="_ry3ldg7wEeeNNets1AkmKA" field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3ldw7wEeeNNets1AkmKA" field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3leA7wEeeNNets1AkmKA" field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter xmi:id="_ry3leQ7wEeeNNets1AkmKA" field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_ry3leQ7wEeeNNets1AkmKA" field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="k3WNzwEJ9MTsQqCStv4d5g==" show="false"/>
     <elementParameter xmi:id="_ry3leg7wEeeNNets1AkmKA" field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3lew7wEeeNNets1AkmKA" field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3lfA7wEeeNNets1AkmKA" field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -75,7 +75,7 @@
     <elementParameter xmi:id="_ry3lmQ7wEeeNNets1AkmKA" field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3lmg7wEeeNNets1AkmKA" field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3lmw7wEeeNNets1AkmKA" field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter xmi:id="_ry3lnA7wEeeNNets1AkmKA" field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_ry3lnA7wEeeNNets1AkmKA" field="PASSWORD" name="PASS" value="k3WNzwEJ9MTsQqCStv4d5g==" show="false"/>
     <elementParameter xmi:id="_ry3lnQ7wEeeNNets1AkmKA" field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3lng7wEeeNNets1AkmKA" field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter xmi:id="_ry3lnw7wEeeNNets1AkmKA" field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -143,7 +143,7 @@
     <elementParameter xmi:id="_ry3l3Q7wEeeNNets1AkmKA" field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
     <elementParameter xmi:id="_ry3l3g7wEeeNNets1AkmKA" field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
     <elementParameter xmi:id="_ry3l3w7wEeeNNets1AkmKA" field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-    <elementParameter xmi:id="_ry3l4A7wEeeNNets1AkmKA" field="CHECK" name="ADVANCED_SETTINGS_CHECK" value="false"/>
+    <elementParameter xmi:id="_ry3l4A7wEeeNNets1AkmKA" field="CHECK" name="ADVANCED_SETTINGS_CHECK" value="true"/>
     <elementParameter xmi:id="_ry3l4Q7wEeeNNets1AkmKA" field="TEXT" name="SPARK_DRIVER_MEM" value="&quot;512m&quot;" show="false"/>
     <elementParameter xmi:id="_ry3l4g7wEeeNNets1AkmKA" field="TEXT" name="SPARK_DRIVER_CORES" value="&quot;1&quot;" show="false"/>
     <elementParameter xmi:id="_ry3l4w7wEeeNNets1AkmKA" field="TEXT" name="SPARK_EXECUTOR_MEM" value="&quot;512m&quot;" show="false"/>
@@ -185,6 +185,9 @@
     <elementParameter xmi:id="_ry4MZQ7wEeeNNets1AkmKA" field="CHECK" name="USE_CHECKPOINT" value="false"/>
     <elementParameter xmi:id="_ry4MZg7wEeeNNets1AkmKA" field="TEXT" name="CHECKPOINT_DIR" value="&quot;file:///tmp/mycheckpoint&quot;" show="false"/>
     <elementParameter xmi:id="_ry4MZw7wEeeNNets1AkmKA" field="TABLE" name="SPARK_ADVANCED_PROPERTIES"/>
+    <elementParameter xmi:id="_JkEbEA8vEeeph6-CZcBCWQ" field="CHECK" name="CUSTOMIZE_SPARK_SERIALIZER" value="true"/>
+    <elementParameter xmi:id="_JkEbEQ8vEeeph6-CZcBCWQ" field="TEXT" name="SPARK_SERIALIZER" value="&quot;org.apache.spark.serializer.JavaSerializer&quot;"/>
+    <elementParameter xmi:id="_Jkgf8A8vEeeph6-CZcBCWQ" field="CHECK" name="SPARK_LOCAL_MODE" value="false"/>
     <routinesParameter xmi:id="_YjoEAg1VEee0fc53vdNqCg" id="_ABeWsAZsEeen4a1vbQRMXw" name="DQTechnical"/>
     <routinesParameter xmi:id="_YjoEAw1VEee0fc53vdNqCg" id="_AACzUAZsEeen4a1vbQRMXw" name="DataMasking"/>
     <routinesParameter xmi:id="_YjoEBA1VEee0fc53vdNqCg" id="__mwJkAZrEeen4a1vbQRMXw" name="DataOperation"/>
