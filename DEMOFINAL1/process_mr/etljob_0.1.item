@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" framework="Spark" jobType="Big_Data_Batch" xmi:id="_EcRI0A_1EeeKx_nV-ZIkvw" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default" xmi:id="_EcRI0Q_1EeeKx_nV-ZIkvw">
+		<contextParameter comment="" name="inputPath" prompt="inputPath?" promptNeeded="false" repositoryContextId="_rOW8kAlqEeeamM6CV2ILdw" type="id_String" value="&quot;c:/temp/names.csv&quot;" xmi:id="_fUBq4g_0EeeKx_nV-ZIkvw"/>
+		<contextParameter comment="" name="outputPath" prompt="outputPath?" promptNeeded="false" repositoryContextId="_rOW8kAlqEeeamM6CV2ILdw" type="id_String" value="&quot;c:/temp/names.parquet&quot;" xmi:id="_fUBq4w_0EeeKx_nV-ZIkvw"/>
+		<contextParameter comment="" name="inputSeperator" prompt="inputSeperator?" promptNeeded="false" repositoryContextId="_rOW8kAlqEeeamM6CV2ILdw" type="id_String" value="&quot;,&quot;" xmi:id="_fUBq5A_0EeeKx_nV-ZIkvw"/>
+  </context>
+  <parameters xmi:id="_EcRI0g_1EeeKx_nV-ZIkvw">
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0" xmi:id="_EcRI0w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0" xmi:id="_EcRI1A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value="" xmi:id="_EcRI1Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value="" xmi:id="_EcRI1g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value="" xmi:id="_EcRI1w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value="" xmi:id="_EcRI2A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value="" xmi:id="_EcRI2Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value="" xmi:id="_EcRI2g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value="" xmi:id="_EcRI2w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value="" xmi:id="_EcRI3A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value="" xmi:id="_EcRI3Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value="" xmi:id="_EcRI3g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value="" xmi:id="_EcRI3w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value="" xmi:id="_EcRI4A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value="" xmi:id="_EcRI4Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value="" xmi:id="_EcRI4g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value="" xmi:id="_EcRI4w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false" xmi:id="_EcRI5A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false" xmi:id="_EcRI5Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false" xmi:id="_EcRI5g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000" xmi:id="_EcRI5w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false" xmi:id="_EcRI6A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false" xmi:id="_EcRI6Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false" xmi:id="_EcRI6g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;C:/Users/anksharm/workspace/in.csv&quot;" xmi:id="_EcRI6w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;" xmi:id="_EcRI7A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value="" xmi:id="_EcRI7Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_11" xmi:id="_EcRI7g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI7w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false" xmi:id="_EcRI8A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI8Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI8g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI8w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI9A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI9Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI9g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI9w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI-A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="0RMsyjmybrE=" xmi:id="_EcRI-Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI-g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI-w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;" xmi:id="_EcRI_A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning" xmi:id="_EcRI_Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning" xmi:id="_EcRI_g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false" xmi:id="_EcRI_w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false" xmi:id="_EcRJAA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="true" xmi:id="_EcRJAQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="true" xmi:id="_EcRJAg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false" xmi:id="_EcRJAw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false" xmi:id="_EcRJBA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false" xmi:id="_EcRJBQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false" xmi:id="_EcRJBg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false" xmi:id="_EcRJBw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/anksharm/workspace/.metadata&quot;" xmi:id="_EcRJCA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;" xmi:id="_EcRJCQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;" xmi:id="_EcRJCg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;" xmi:id="_EcRJCw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15" xmi:id="_EcRJDA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15" xmi:id="_EcRJDQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false" xmi:id="_EcRJDg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput" xmi:id="_EcRJDw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_11" xmi:id="_EcRJEA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;" xmi:id="_EcRJEQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false" xmi:id="_EcRJEg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;" xmi:id="_EcRJEw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;" xmi:id="_EcRJFA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;" xmi:id="_EcRJFQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;" xmi:id="_EcRJFg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;" xmi:id="_EcRJFw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;" xmi:id="_EcRJGA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;" xmi:id="_EcRJGQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;" xmi:id="_EcRJGg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;" xmi:id="_EcRJGw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE=" xmi:id="_EcRJHA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;" xmi:id="_EcRJHQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;" xmi:id="_EcRJHg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;" xmi:id="_EcRJHw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;" xmi:id="_EcRJIA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true" xmi:id="_EcRJIQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true" xmi:id="_EcRJIg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true" xmi:id="_EcRJIw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false" xmi:id="_EcRJJA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value="" xmi:id="_EcRJJQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false" xmi:id="_EcRJJg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value="" xmi:id="_EcRJJw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value="" xmi:id="_EcRJKA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value="" xmi:id="_EcRJKQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value="" xmi:id="_EcRJKg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false" xmi:id="_EcRJKw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value="" xmi:id="_EcRJLA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value="" xmi:id="_EcRJLQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value="" xmi:id="_EcRJLg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SPARK_LOCAL_MODE" value="false" xmi:id="_EcRJLw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="SPARK_LOCAL_VERSION" show="false" value="SPARK_2_0_0" xmi:id="_EcRJMA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" value="MICROSOFT_HD_INSIGHT" xmi:id="_hFNBcRBWEee7VNzAyJRqMQ"/>
+    <elementParameter field="CLOSED_LIST" name="SPARK_VERSION" value="MICROSOFT_HD_INSIGHT_3_4" xmi:id="_EcRJMQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="HADOOP_DISTRIBUTION" name="SPARKBATCH" show="false" value="" xmi:id="_EcRJMg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value="" xmi:id="_EcRJMw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="** The version of Spark must be 1.3.0 or later." xmi:id="_EcRJNA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="SPARK_API_VERSION" show="false" value="SPARK_200" xmi:id="_EcRJNQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="SPARK_MODE" show="false" value="YARN_CLUSTER" xmi:id="_EcRJNg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="RESOURCE_MANAGER" show="false" value="&quot;&quot;" xmi:id="_EcRJNw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_SCHEDULER_ADDRESS" show="false" value="false" xmi:id="_EcRJOA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" show="false" value="&quot;&quot;" xmi:id="_EcRJOQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_JOBHISTORY_ADDRESS" show="false" value="false" xmi:id="_EcRJOg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="JOBHISTORY_ADDRESS" show="false" value="&quot;&quot;" xmi:id="_EcRJOw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_STAGING_DIRECTORY" show="false" value="false" xmi:id="_EcRJPA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="STAGING_DIRECTORY" show="false" value="&quot;/user&quot;" xmi:id="_EcRJPQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HDINSIGHT_ENDPOINT" show="false" value="&quot;https://xxxx.azurehdinsight.net&quot;" xmi:id="_EcRJPg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HDINSIGHT_USERNAME" show="false" value="&quot;&quot;" xmi:id="_EcRJPw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="HDINSIGHT_PASSWORD" show="false" value="0RMsyjmybrE=" xmi:id="_EcRJQA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="LIVY_HOST" show="false" value="&quot;&quot;" xmi:id="_EcRJQQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="LIVY_PORT" show="false" value="&quot;443&quot;" xmi:id="_EcRJQg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="LIVY_USERNAME" show="false" value="&quot;&quot;" xmi:id="_EcRJQw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HDINSIGHT_USERNAME" show="false" value="&quot;&quot;" xmi:id="_EcRJRA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="HDINSIGHT_PASSWORD" show="false" value="0RMsyjmybrE=" xmi:id="_EcRJRQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="WASB_HOST" show="false" value="&quot;&quot;" xmi:id="_EcRJRg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="WASB_CONTAINER" show="false" value="&quot;&quot;" xmi:id="_EcRJRw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="WASB_USERNAME" show="false" value="&quot;&quot;" xmi:id="_EcRJSA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="WASB_PASSWORD" show="false" value="0RMsyjmybrE=" xmi:id="_EcRJSQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="REMOTE_FOLDER" show="false" value="&quot;&quot;" xmi:id="_EcRJSg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_HOST" show="false" value="&quot;spark://localhost:7077&quot;" xmi:id="_EcRJSw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_HOME" show="false" value="&quot;/usr/lib/spark&quot;" xmi:id="_EcRJTA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DEFINE_HADOOP_HOME_DIR" show="false" value="false" xmi:id="_EcRJTQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HADOOP_HOME_DIR" show="false" value="&quot;C:/Talend/winutils&quot;" xmi:id="_EcRJTg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DEFINE_SPARK_DRIVER_HOST" show="false" value="false" xmi:id="_EcRJTw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_DRIVER_HOST" show="false" value="&quot;127.0.0.1&quot;" xmi:id="_EcRJUA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_KRB" show="false" value="false" xmi:id="_EcRJUQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="RESOURCEMANAGER_PRINCIPAL" show="false" value="&quot;yarn/_HOST@EXAMPLE.COM&quot;" xmi:id="_EcRJUg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="JOBHISTORY_PRINCIPAL" show="false" value="&quot;mapred/_HOST@EXAMPLE.COM&quot;" xmi:id="_EcRJUw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_KEYTAB" show="false" value="false" xmi:id="_EcRJVA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="PRINCIPAL" show="false" value="&quot;hdfs&quot;" xmi:id="_EcRJVQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="FILE" name="KEYTAB_PATH" show="false" value="&quot;/tmp/hdfs.headless.keytab&quot;" xmi:id="_EcRJVg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;&quot;" xmi:id="_EcRJVw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_MAPRTICKET" show="false" value="false" xmi:id="_EcRJWA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" show="false" value="0RMsyjmybrE=" xmi:id="_EcRJWQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" show="false" value="&quot;demo.mapr.com&quot;" xmi:id="_EcRJWg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_DURATION" show="false" value="86400L" xmi:id="_EcRJWw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false" xmi:id="_EcRJXA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;" xmi:id="_EcRJXQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false" xmi:id="_EcRJXg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;" xmi:id="_EcRJXw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ADVANCED_SETTINGS_CHECK" value="false" xmi:id="_EcRJYA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_DRIVER_MEM" show="false" value="&quot;512m&quot;" xmi:id="_EcRJYQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_DRIVER_CORES" show="false" value="&quot;1&quot;" xmi:id="_EcRJYg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_EXECUTOR_MEM" show="false" value="&quot;512m&quot;" xmi:id="_EcRJYw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_SPARK_EXECUTOR_MEM_OVERHEAD" show="false" value="false" xmi:id="_EcRJZA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_EXECUTOR_MEM_OVERHEAD" show="false" value="&quot;384&quot;" xmi:id="_EcRJZQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SPARK_EXECUTOR_CORES_CHECK" show="false" value="false" xmi:id="_EcRJZg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_EXECUTOR_CORES" show="false" value="&quot;1&quot;" xmi:id="_EcRJZw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="SPARK_YARN_ALLOC_TYPE" show="false" value="AUTO" xmi:id="_EcRJaA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_EXECUTOR_INSTANCES" show="false" value="&quot;2&quot;" xmi:id="_EcRJaQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_YARN_DYN_INIT" show="false" value="&quot;1&quot;" xmi:id="_EcRJag_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_YARN_DYN_MIN" show="false" value="&quot;0&quot;" xmi:id="_EcRJaw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_YARN_DYN_MAX" show="false" value="&quot;MAX&quot;" xmi:id="_EcRJbA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="WEB_UI_PORT_CHECK" show="false" value="false" xmi:id="_EcRJbQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="WEB_UI_PORT" show="false" value="&quot;4040&quot;" xmi:id="_EcRJbg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="SPARK_BROADCAST_FACTORY" show="false" value="AUTO" xmi:id="_EcRJbw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CUSTOMIZE_SPARK_SERIALIZER" show="false" value="false" xmi:id="_EcRJcA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_SERIALIZER" show="false" value="&quot;org.apache.spark.serializer.KryoSerializer&quot;" xmi:id="_EcRJcQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ENABLE_SPARK_EVENT_LOGGING" show="false" value="false" xmi:id="_EcRJcg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="COMPRESS_SPARK_EVENT_LOGS" show="false" value="false" xmi:id="_EcRJcw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_EVENT_LOG_DIR" show="false" value="&quot;hdfs://namenode:8020/user/spark/applicationHistory&quot;&#10;&#9;&#9;&#9;" xmi:id="_EcRJdA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARKHISTORY_ADDRESS" show="false" value="&quot;sparkHistoryServer:18080&quot;" xmi:id="_EcRJdQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_CLOUDERA_NAVIGATOR" show="false" value="false" xmi:id="_EcRJdg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CLOUDERA_NAVIGATOR_USERNAME" show="false" value="&quot;username&quot;" xmi:id="_EcRJdw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="CLOUDERA_NAVIGATOR_PASSWORD" show="false" value="PoLvNyVG2XWndNDdLn696A==" xmi:id="_EcRJeA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CLOUDERA_NAVIGATOR_URL" show="false" value="&quot;http://localhost:7187/api/v8/&quot;" xmi:id="_EcRJeQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CLOUDERA_NAVIGATOR_METADATA_URL" show="false" value="&quot;http://localhost:7187/api/v8/metadata/plugin&quot;" xmi:id="_EcRJeg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CLOUDERA_NAVIGATOR_CLIENT_URL" show="false" value="&quot;http://localhost&quot;" xmi:id="_EcRJew_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CLOUDERA_NAVIGATOR_AUTOCOMMIT" show="false" value="false" xmi:id="_EcRJfA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CLOUDERA_NAVIGATOR_DISABLE_SSL_VALIDATION" show="false" value="false" xmi:id="_EcRJfQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CLOUDERA_NAVIGATOR_DIE_ON_ERROR" show="false" value="true" xmi:id="_EcRJfg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_ATLAS" show="false" value="false" xmi:id="_EcRJfw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="ATLAS_URL" show="false" value="&quot;http://localhost:21000&quot;" xmi:id="_EcRJgA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="ATLAS_USERNAME" show="false" value="&quot;admin&quot;" xmi:id="_EcRJgQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="PASSWORD" name="ATLAS_PASSWORD" show="false" value="0RMsyjmybrE=" xmi:id="_EcRJgg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="SET_ATLAS_APPLICATION_PROPERTIES" show="false" value="false" xmi:id="_EcRJgw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="ATLAS_APPLICATION_PROPERTIES" show="false" value="&quot;/user/atlas/atlas-application.properties&quot;" xmi:id="_EcRJhA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ATLAS_DIE_ON_ERROR" show="false" value="false" xmi:id="_EcRJhQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_SCRATCH_DIR" value="&quot;/tmp&quot;" xmi:id="_EcRJhg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_CHECKPOINT" value="false" xmi:id="_EcRJhw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CHECKPOINT_DIR" show="false" value="&quot;file:///tmp/mycheckpoint&quot;" xmi:id="_EcRJiA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="SPARK_ADVANCED_PROPERTIES" xmi:id="_EcRJiQ_1EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="_ABeWsAZsEeen4a1vbQRMXw" name="DQTechnical" xmi:id="_nrfFEw_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="_AACzUAZsEeen4a1vbQRMXw" name="DataMasking" xmi:id="_nrfFFA_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="__mwJkAZrEeen4a1vbQRMXw" name="DataOperation" xmi:id="_nrfFFQ_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="_AA9ZUAZsEeen4a1vbQRMXw" name="DataQualityDependencies" xmi:id="_nrfFFg_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="_AArsgAZsEeen4a1vbQRMXw" name="DataQuality" xmi:id="_nrfFFw_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="_ABRiYAZsEeen4a1vbQRMXw" name="DqStringHandling" xmi:id="_nrfFGA_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="__-CoMAZrEeen4a1vbQRMXw" name="Mathematical" xmi:id="_nrfFGQ_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="__-QDkAZrEeen4a1vbQRMXw" name="Numeric" xmi:id="_nrfFGg_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="__-psMAZrEeen4a1vbQRMXw" name="Relational" xmi:id="_nrfFGw_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="_ABiBEAZsEeen4a1vbQRMXw" name="SQLike" xmi:id="_nrfFHA_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="___D74AZrEeen4a1vbQRMXw" name="StringHandling" xmi:id="_nrfFHQ_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="___GYIAZrEeen4a1vbQRMXw" name="TalendDataGenerator" xmi:id="_nrfFHg_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="___lgUAZrEeen4a1vbQRMXw" name="TalendDate" xmi:id="_nrfFHw_0EeeKx_nV-ZIkvw"/>
+    <routinesParameter id="____wAAZrEeen4a1vbQRMXw" name="TalendString" xmi:id="_nrfFIA_0EeeKx_nV-ZIkvw"/>
+  </parameters>
+  <node componentName="tFileInputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="128" xmi:id="_EcRJig_1EeeKx_nV-ZIkvw">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1" xmi:id="_EcRJiw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DEFINE_STORAGE_CONFIGURATION" value="false" xmi:id="_EcRJjA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="COMPONENT_LIST" name="STORAGE_CONFIGURATION" show="false" value="" xmi:id="_EcRJjQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY" xmi:id="_EcRJjg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="inputschema - metadata" xmi:id="_EcRJjw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FIELD" show="false" value="line" xmi:id="_EcRJkA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="BOTH_HADOOP" name="FILENAME" value="context.inputPath" xmi:id="_EcRJkQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" xmi:id="_EcRJkg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" xmi:id="_EcRJkw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;" xmi:id="_EcRJlA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="context.inputSeperator" xmi:id="_EcRJlQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;" xmi:id="_EcRJlg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;" xmi:id="_EcRJlw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false" xmi:id="_EcRJmA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="HEADER" value="" xmi:id="_EcRJmQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false" xmi:id="_EcRJmg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_MIN_PARTITIONS" value="false" xmi:id="_EcRJmw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="MIN_PARTITIONS" show="false" value="2" xmi:id="_EcRJnA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CUSTOM_ENCODING" value="false" xmi:id="_EcRJnQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;" xmi:id="_EcRJng_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8" xmi:id="_EcRJnw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false" xmi:id="_EcRJoA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;" xmi:id="_EcRJoQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;" xmi:id="_EcRJog_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false" xmi:id="_EcRJow_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="TRIMSELECT" xmi:id="_EcRJpA_1EeeKx_nV-ZIkvw">
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" xmi:id="lhco9k0voas2sr95fj9nfndojh"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="l9l7r9312p559arvvs882o7q94"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fractional" xmi:id="dkmi726jd69gj4rit09uu0uu8k"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="91jqlcfjb2nujmp80771ol99k6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" xmi:id="6488v08jogm8m0lpnfb305euei"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="ei52ip22209591d6egqhtnj4qt"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastTouch" xmi:id="dmmhqpklfv46vrn49fcomh1pb7"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="hls9t7ldtli54tqd988mqddq5l"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__channel_category" xmi:id="r1o6se3mlc02gt71k8d82jc8dn"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="uum942lg4g5lej3u6ug0o7lqjm"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__event_type" xmi:id="ihi6ldbt2u4bj4qkdi8p3gddpi"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="auo0mc983grv5ashtf47fjt1k5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__event_date" xmi:id="qslggodsbsdph0oh2l3aubonn"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="ev789so2mql2fqpgjftkiifgkl"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" xmi:id="4u01t7dan2a93079p0pe2seu17"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="d6dbosl9kgsmi0m184asl1cfv1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__adPlacement_cost" xmi:id="i3rkre5be70alivs5tj7bg5han"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="kk0ll79bcocau8o5duj09vpik9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" xmi:id="f4l2mq20mrhqdic5nhha8331du"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="k13opveu8ge1sp0r3fmd4c1uj2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" xmi:id="b3kbo538psnbh6ai6q9pr5kbc0"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="l5o6t2cb08f51e2avra9o9n3ng"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="marginal" xmi:id="h0gnbs1m6bb46kofgff2m6h46j"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="j5nhlq6k7p135plca4a4a7c64a"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conversionInstances" xmi:id="l6qa20cb88n91eqn4ihl1pug68"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="4h6imj4l9v1frjck04r1cte47p"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" xmi:id="l87qeq9gk7aai2hijcmoadsbdr"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="dfo8fj3blcjqrig0lu5s8qvpdl"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" xmi:id="b5srp5is2ntfftlrd7c3e8d1h4"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="5nrd2dssm0ltrprrd85d2u8tmv"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="touchpointInstances" xmi:id="q22u44h8tdb5p5514ejvbpdvtn"/>
+      <elementValue elementRef="TRIM" value="false" xmi:id="bhfj0avkvgburdnauhf1vkhb9c"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false" xmi:id="_EcRJqw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false" xmi:id="_EcRJrA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false" xmi:id="_EcRJrQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false" xmi:id="_EcRJrg_1EeeKx_nV-ZIkvw">
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" xmi:id="f4t3scofrfukosctvbahbc1sb4"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="jsqaajcl2an9crqrc1ujqggvr6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fractional" xmi:id="srse8eg3o5v8rk7v0ih9e11a0h"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="sn0ap0c7re2dr5n4cq48lnqbsf"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" xmi:id="4qv9ifrfu8f3qhjfkuoag54mgg"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="v9nermb4cmot1kv06hs9fc57ik"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastTouch" xmi:id="7fra2lhvtt4tknfka26b5u13qp"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="ddjsluu5k8itqqbcjvvod9j5tr"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__channel_category" xmi:id="6oikuc10is7kq8o77m4fhv1ag2"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="nvc0uo86138h192bkm4p96j166"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__event_type" xmi:id="igddcrabbea0so618c18ugbrid"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="tsp3035t8f6ngnda1rurc40ims"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__event_date" xmi:id="t1lvekglv7ceb3imhnhm8a863a"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="22gktscc4kjob8351mjn43tpq1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" xmi:id="7hjcq79s0v664np54d4a6kmd6k"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="q25vel8ve0cda7u5dfslav1jct"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__adPlacement_cost" xmi:id="ig65vib8ubhb9n0dgg7a4nvlu8"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="6rrg9nflfr9qfpm5ijgcvhqi83"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" xmi:id="m27qm5kdluap2ud171ftii1mpg"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="u9pp1nck4ne5o9mho765o1tdbf"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" xmi:id="9a6p95f6ttn2b43q1v5098dfrb"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="62v7voa14arv6muvor6ak54a61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="marginal" xmi:id="hf2678qv597qs82jn6b2or8me2"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="7s0bhep3evgecj4r6igtjrfbib"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conversionInstances" xmi:id="v6kigt9ki92ievvejn9luk1ld0"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="fr0bha6fgtken2d3s14jskc1h5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" xmi:id="gn6fs244epl0mgtl18c4emkg9k"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="c6hk1bs7bq23lcbjks6762d1vg"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" xmi:id="j06kukp3aolkc6ksotr5kb3vh1"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="3fj3qqjmbb5i66ll1rupnvj0nh"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="touchpointInstances" xmi:id="q0u1kp9ecsurh0qegh1mapb7fl"/>
+      <elementValue elementRef="DECODE" value="false" xmi:id="15e3msklgetevem3j71g1i1dbf"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" xmi:id="_EcRJtQ_1EeeKx_nV-ZIkvw"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputDelimited_1" xmi:id="_EcRJtg_1EeeKx_nV-ZIkvw">
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="qaqvdt0fa4m28pn7rlbn7e577t"/>
+      <column comment="" key="false" length="0" name="fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="9snvraeoj4kj9m7198pk1nubl7"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="plf0kci9jnv59kdujbfupu2k74"/>
+      <column comment="" key="false" length="0" name="lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="40dfkceg0fg0h9pbf14t46uet7"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="tc47268fq7o1mclp1he8sbu99q"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="qcmsdrkrln8es4o19ns2salk04"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="dvrsvgonl59jhfc4lqq4upsvp5"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="6774h419mc9orkekgirf03vd6q"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="fhbkuq19r0avfb5cqvhalumhh8"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="2fmj51an7jav9gk5sgkmaog0ns"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="2i77td60ijjqhphf2tbbgbtd9q"/>
+      <column comment="" key="false" length="0" name="marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="81ugngh5oihjjav05j4gbpp47o"/>
+      <column comment="" key="false" length="0" name="conversionInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="m5eu389gqf5n38in0qdc0maqdo"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="4n7m9utt3avliis4k22fm105u7"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="d0o7hdku9rpkkc1rttkmppet3v"/>
+      <column comment="" key="false" length="0" name="touchpointInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="18i6ajlh69799gt8591qgll925"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT" xmi:id="_EcRJug_1EeeKx_nV-ZIkvw">
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="7uip86uc3ofllhtjmrd6kaseic"/>
+      <column comment="" key="false" length="0" name="fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="6dk5d2nqki05jo2hoo1jule4rn"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="h1nfvkdmf9ckmkfddl2u76i0cq"/>
+      <column comment="" key="false" length="0" name="lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="g6mf1a9ue0dsv43l2qm77iej6i"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="c8ipkcefdfupv083lkpfekdr3n"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1f7ld027jkp5p6ndd46vporbfi"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="a574cr8vn7koas7biucguitj5e"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="u7lq2ktjge1nrjf6uf7ugfoisf"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="g5bhit8hhgr942do8skij16fp8"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="b5bl0can60a6hju1cbk78ac982"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="ed0os3s0bieqara7oa8o9b84cc"/>
+      <column comment="" key="false" length="0" name="marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="45a8lit4lpi6nltk2q162mu73h"/>
+      <column comment="" key="false" length="0" name="conversionInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="a4g0nl2n8ro1q65r99muiq1d32"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="3knl1lpkkuk0eolv16jbk6tsh2"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="n414r1vcuoa9b6bnmsb0fj45pg"/>
+      <column comment="" key="false" length="0" name="touchpointInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="86u5jebmvcaj1nk8sthmmnb72i"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true" xmi:id="l361qhi86ab04lalbbmq6tq23b"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true" xmi:id="9rh7euvf11uu2482ra4pojcem0"/>
+      <column defaultValue="" key="false" length="255" name="inputLine" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true" xmi:id="q2la70jml0l2a6ni03800dtra4"/>
+    </metadata>
+    <metadata connector="INTERMEDIATE" name="INTERMEDIATE" xmi:id="_EcRJwQ_1EeeKx_nV-ZIkvw">
+      <column defaultValue="" key="false" length="255" name="line" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true" xmi:id="_EcRJwg_1EeeKx_nV-ZIkvw"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="128" xmi:id="_EcRJww_1EeeKx_nV-ZIkvw">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1" xmi:id="_EcRJxA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="EXTERNAL" name="MAP" value="" xmi:id="_EcRJxQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO" xmi:id="_EcRJxg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="REPLICATED_JOIN" value="false" xmi:id="_EcRJxw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_nrfFEA_0EeeKx_nV-ZIkvw-tMap_1-PREVIEW.bmp" xmi:id="_EcRJyA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false" xmi:id="_EcRJyQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" xmi:id="_EcRJyg_1EeeKx_nV-ZIkvw"/>
+    <metadata connector="FLOW" label="metadata" name="parquetWrite" xmi:id="_EcRJyw_1EeeKx_nV-ZIkvw">
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="e2m0msr8hlpl3454q9q3nnhog0"/>
+      <column comment="" key="false" length="0" name="fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="9ds8n2bg0g6qh25npnrqaafrod"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="hdj3jpimrs0saf29hdemeas3ar"/>
+      <column comment="" key="false" length="0" name="lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="39u4bq4o87e8d2ho2c99h58at"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="79qu0lgrumvjs4aahmgpu2p86e"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="a87ha1ikb9cefkt1hv4jtmcnrd"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="dskvh1vndlrjqf07vv54ik1pd3"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="v509smslhkoibaks8lbqa8m29l"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="ap2ndpgg1anvlr3871qii2qef0"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="8pedq62atqova5rc432muc4cm1"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="5nhjergrosgp0i9napbc20nv6c"/>
+      <column comment="" key="false" length="0" name="marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="luva315pcna8dfku37g9bmak9a"/>
+      <column comment="" key="false" length="0" name="conversionInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="no9aj6pb6uv72tj8ljnm0v23bi"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="77k3bpvro8sa4dgphaipj9shj4"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="mc7golrorigmmcb9jmf4a6bfq3"/>
+      <column comment="" key="false" length="0" name="touchpointInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="47ji28hio9pub864587513gr5k"/>
+    </metadata>
+    <metadata connector="FLOW" label="metadata" name="logwrite" xmi:id="_EcRJzw_1EeeKx_nV-ZIkvw">
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="betm2br9lnhqkt39ee897muauj"/>
+      <column comment="" key="false" length="0" name="fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="hkq6hs2d97jkvj346hcglkm4dn"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="s8l03obqege58me0furhg22kbc"/>
+      <column comment="" key="false" length="0" name="lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="g1vg6tf1n3bu83pi7lld1ujfmu"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="tghg4haguh3ru3n0dhtmuu84mi"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="nl4h7lga7bp42idj7eldna8lu9"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="d0f1cb3o857qo0pgljkuillas"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="rtenri6tvpu7rm8fhh7g09jgb9"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="7bdq2b0ge1o53igi94fi8bagvk"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="gjuasvl1bld8ev85rubea9195s"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="gkm0rkvqp3v07liqrk5car1hsj"/>
+      <column comment="" key="false" length="0" name="marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="bq5od7gnqms48tg49a21lpsqcq"/>
+      <column comment="" key="false" length="0" name="conversionInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="jmqrvegqi1csfug4554m5upnc6"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1e2f1fohqlvb88i7fot5uh9th6"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1fsehbnrac3nq9vlahto0kg9p6"/>
+      <column comment="" key="false" length="0" name="touchpointInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="dvjsgkfil32jc4suf9ud78ut9i"/>
+    </metadata>
+    <nodeData xmi:id="_EcRJ0w_1EeeKx_nV-ZIkvw" xsi:type="MapperData">
+      <uiProperties xmi:id="_EcRJ1A_1EeeKx_nV-ZIkvw"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE" xmi:id="_EcRJ1Q_1EeeKx_nV-ZIkvw"/>
+      <outputTables name="parquetWrite" sizeState="INTERMEDIATE" xmi:id="_EcRJ1g_1EeeKx_nV-ZIkvw">
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" type="id_String" xmi:id="u5h4421urlu5u2sailuis5gfqs"/>
+        <mapperTableEntries name="fractional" nullable="true" type="id_String" xmi:id="prim4mtbt8scckgp69f1uudp9r"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" type="id_String" xmi:id="o7274glddbvajbks12otr0evnm"/>
+        <mapperTableEntries name="lastTouch" nullable="true" type="id_String" xmi:id="mu02uge29trjgtfgsobjjgg77i"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" type="id_String" xmi:id="68fsb1umqvdolha3ggpbvqvbdr"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" type="id_String" xmi:id="j2iubmhr7724au3h3cff78itci"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" type="id_String" xmi:id="oiks3ah3emnqhvecj3krpnrojo"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" type="id_String" xmi:id="emjg7uf0utuati9hjvp23tmopd"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" type="id_String" xmi:id="6emsd979jfslqou55m6h7aaknf"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" type="id_String" xmi:id="pod86scchpsmpk3qqit1epqv5t"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" type="id_String" xmi:id="63j8jdecae151ke6k78kbcl54r"/>
+        <mapperTableEntries name="marginal" nullable="true" type="id_String" xmi:id="sf7ekc3be17f5r48fv2mutbdd9"/>
+        <mapperTableEntries name="conversionInstances" nullable="true" type="id_String" xmi:id="q0t7nsdshnrj847fqfq8o6sqje"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" type="id_String" xmi:id="bccn1d94qk74h30vo0cdajqhrv"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" type="id_String" xmi:id="f8t6mfubqcmb2olle4ha3afoph"/>
+        <mapperTableEntries name="touchpointInstances" nullable="true" type="id_String" xmi:id="uk7k6v690bcncntrh0ku58ubh"/>
+      </outputTables>
+      <outputTables name="logwrite" sizeState="INTERMEDIATE" xmi:id="_EcRJ2g_1EeeKx_nV-ZIkvw">
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" type="id_String" xmi:id="8ss7b8lgcgfqor1ron8lblat5a"/>
+        <mapperTableEntries name="fractional" nullable="true" type="id_String" xmi:id="n7q3bkun88n49tpoalu04kl0h6"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" type="id_String" xmi:id="gt5d5gl1t20pgd148js6ncin02"/>
+        <mapperTableEntries name="lastTouch" nullable="true" type="id_String" xmi:id="moajtfkop92puvg0a393iaa31j"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" type="id_String" xmi:id="s767p6shh3vlvkehh610r7remu"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" type="id_String" xmi:id="gfskbmcqgb9rbuopji53cch6br"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" type="id_String" xmi:id="vfppu5br0it520b8iktcnv249p"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" type="id_String" xmi:id="gsbjvm77av57alje6or9p0r6sa"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" type="id_String" xmi:id="brm73cjnuhige381l8jcldd8p1"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" type="id_String" xmi:id="j4v307vt4n4ft60cm28n4m1pep"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" type="id_String" xmi:id="c6b7f0ium4phg4r2rbngu4qa08"/>
+        <mapperTableEntries name="marginal" nullable="true" type="id_String" xmi:id="p5g70sir241i3bvj9usl3q788i"/>
+        <mapperTableEntries name="conversionInstances" nullable="true" type="id_String" xmi:id="9q3pb506pgak18rlp87c6beb7e"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" type="id_String" xmi:id="aeup2g976jjt5rsl7gq7qqgrou"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" type="id_String" xmi:id="4fh7f6o9tp90imhhhht4n15e1t"/>
+        <mapperTableEntries name="touchpointInstances" nullable="true" type="id_String" xmi:id="8u4mtij3rov7oim0ssols5kqf8"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE" xmi:id="_EcRJ3g_1EeeKx_nV-ZIkvw">
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" type="id_String" xmi:id="g32ehduqhg6qti5jjd3k41b3s9"/>
+        <mapperTableEntries name="fractional" nullable="true" type="id_String" xmi:id="dnrj8d998os82qab2pcojuieg8"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" type="id_String" xmi:id="tuu5d82dakbcoek68irhos0dpf"/>
+        <mapperTableEntries name="lastTouch" nullable="true" type="id_String" xmi:id="np5pr7i8vn2pb3kfgovuqbspf2"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" type="id_String" xmi:id="59mjck4inqk41vpv88n97v2n2n"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" type="id_String" xmi:id="r24r7u9b470liae3tpdigajavp"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" type="id_String" xmi:id="4a42m64qmc844c00jhbqdl71e4"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" type="id_String" xmi:id="uudrnsje6n76sv9eavdegn2nva"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" type="id_String" xmi:id="o2flapvi7iojd91uapldtgvg44"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" type="id_String" xmi:id="gakcfg0mdcjhp3sc84o1smmrhl"/>
+        <mapperTableEntries name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" type="id_String" xmi:id="gaahb0h9i4o9i9vjkjkvfikjjv"/>
+        <mapperTableEntries name="marginal" nullable="true" type="id_String" xmi:id="950g1t819t11u3s2qnfhp6vkt4"/>
+        <mapperTableEntries name="conversionInstances" nullable="true" type="id_String" xmi:id="lplgsceb2eelsi7tj61ibdv98k"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" type="id_String" xmi:id="vkmp355url0hl3fddt25lvo7ef"/>
+        <mapperTableEntries name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" type="id_String" xmi:id="j5k437b14j0q4g184cbermgt9r"/>
+        <mapperTableEntries name="touchpointInstances" nullable="true" type="id_String" xmi:id="je4r6tmiftfoaled7lf7s0u61n"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputParquet" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="128" xmi:id="_EcRJ4g_1EeeKx_nV-ZIkvw">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputParquet_1" xmi:id="_EcRJ4w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DEFINE_STORAGE_CONFIGURATION" value="false" xmi:id="_EcRJ5A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="COMPONENT_LIST" name="STORAGE_CONFIGURATION" show="false" value="" xmi:id="_EcRJ5Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY" xmi:id="_EcRJ5g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="outputschema - metadata" xmi:id="_EcRJ5w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="HADOOP_LIBRARIES" name="SPARKBATCH" show="false" value="" xmi:id="_EcRJ6A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="DIRECTORY_HADOOP" name="FILENAME" value="context.outputPath" xmi:id="_EcRJ6Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="FILE_ACTION" value="CREATE" xmi:id="_EcRJ6g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CLOSED_LIST" name="COMPRESSION" value="UNCOMPRESSED" xmi:id="_EcRJ6w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="SPARK_CONFIGURATION" show="false" value="tSparkConfiguration_1" xmi:id="_EcRJ7A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="DEFINE_PARTITIONS" value="false" xmi:id="_EcRJ7Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="PARTITION_BY" show="false" xmi:id="_EcRJ7g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" xmi:id="_EcRJ7w_1EeeKx_nV-ZIkvw"/>
+    <metadata connector="FLOW" label="metadata" name="tFileOutputParquet_1" xmi:id="_EcRJ8A_1EeeKx_nV-ZIkvw">
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1itdbiuj83o2hih109m1ch6581"/>
+      <column comment="" key="false" length="0" name="fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="14nhf08nr2m4h7i20ein0oliql"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1qufrrifr2470jci5tqvptklf7"/>
+      <column comment="" key="false" length="0" name="lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="i07fjbjdnc6k4lg5lhun4gdoh6"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="88fnccrv4uq00uqbivkd1785gg"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="uk1r9pgndvnqr2h9olvm18hrkq"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="np9abgj2g10ihl53egsp4qtq49"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="re4lpaiuk2musa513tuhulade3"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="tkneqauqasdcmbe1lc0464fh6f"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="sqa01lti4jebnn01d3umtvifsf"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="s3fnp33i8uqq9m62qiogb1u234"/>
+      <column comment="" key="false" length="0" name="marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1j5r5c5dj02trob8rvslmam97n"/>
+      <column comment="" key="false" length="0" name="conversionInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="112bpjekns9fpi7jsrdp0fe6l4"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1s220lsjr5j43ag2du73ji1hh9"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="d0cvm9i8cq29cin4a0780k3vto"/>
+      <column comment="" key="false" length="0" name="touchpointInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="19g2qjif5hc4hr1fg18bsr0p0v"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="320" xmi:id="_EcRJ9A_1EeeKx_nV-ZIkvw">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1" xmi:id="_EcRJ9Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY" xmi:id="_EcRJ9g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="outputschema - metadata" xmi:id="_EcRJ9w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true" xmi:id="_EcRJ-A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false" xmi:id="_EcRJ-Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false" xmi:id="_EcRJ-g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true" xmi:id="_EcRJ-w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false" xmi:id="_EcRJ_A_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false" xmi:id="_EcRJ_Q_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" xmi:id="_EcRJ_g_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" xmi:id="_EcRJ_w_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" xmi:id="_EcRKAA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" xmi:id="_EcRKAQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" xmi:id="_EcRKAg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false" xmi:id="_EcRKAw_1EeeKx_nV-ZIkvw">
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" xmi:id="smt2hh241uo3ven28a3ibo3cdl"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="thlass0fc655fdu5soa2k7ba8f"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fractional" xmi:id="brceq01qp3c0046p3eum2kd662"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="60b7bfl4p8cubvmgv1jr78ms4g"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" xmi:id="51qeae1i4gv9g7st7oqatp95o6"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="16uspl2dk8k803o046n4r83qkc"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastTouch" xmi:id="mar3dv0buionaqtisqcr8cqcl2"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="2c4rdp7evldongsvdetflsk0q3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__channel_category" xmi:id="hh7rpbtruaucga6dkqmvh5j9hp"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="ctcvegaobq70kh2adu3noun8i"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__event_type" xmi:id="kfoceec0le6u88ki3ahelpm2e5"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="e8fp5piq4fq3pm8rks4c07i9f"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__event_date" xmi:id="lqk5mu5s40osgnmre90l6shbdp"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="nua7fi2ape2uutrgaht6sj4lau"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" xmi:id="7aj87l5gokgmptn5rssjcol99m"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="e2bi7b8onk7omj2bmmh7tijo92"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__adPlacement_cost" xmi:id="k6dbgjclgidql4t8bj7j0ig8ee"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="bheqj4eqie7f8ne0jkeuqv11nc"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" xmi:id="sfpkqugde9uo1c2esh9qlfv6sg"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="hhurvm298oppoklijt6unno3g0"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" xmi:id="njmjuhi1cansa7u2nva7u60ops"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="ch695jttliqbstl8kr3cd78nih"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="marginal" xmi:id="d6dik12h7o1meq4tqou5ekad3q"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="tob115m9g3tk78krie51akqu72"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conversionInstances" xmi:id="ba2ompffkvdf8f1gm6oji9habr"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="dfckhle28kc4v96s294i2ggn9p"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" xmi:id="sc9frc3126ucu5s4mqa0ppp31f"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="2n5aarl5vedqjfh3vg6vkfo9ch"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" xmi:id="34mca585jcib14meivme5mu9l7"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="d6io4t3svljuj1s3ir0qiep1b"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="touchpointInstances" xmi:id="398h0khmk8lpnjv2j6cakgrath"/>
+      <elementValue elementRef="LENGTH" value="10" xmi:id="hbq33sk8egp5o9u3jovoq5tpgn"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" xmi:id="_EcRKCg_1EeeKx_nV-ZIkvw"/>
+    <metadata connector="FLOW" label="metadata" name="tLogRow_1" xmi:id="_EcRKCw_1EeeKx_nV-ZIkvw">
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="55k31cv03aqqaevdlhb59ioq4m"/>
+      <column comment="" key="false" length="0" name="fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="5f4i464mp5o9jgj4oaluiqt89p"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="2eev65dak85746n6b0vdr4usq5"/>
+      <column comment="" key="false" length="0" name="lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="95krrtn97o0er8umc8s1lrervj"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="c2ekjrqhiqtcdjs5eklmrab0la"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="d5ff7hd3ml36lfgep6ak4vqb39"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__event_date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="56dh1tnr17gj9fv2li7eirq7gf"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="iq5rjtnt5vu7esdokbf0rpqanf"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__adPlacement_cost" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="4i5qfr8knv39h0aq97h0p2am0f"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_fractional" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="d8t82q2f5i9ecp6imkj2rv2kdb"/>
+      <column comment="" key="false" length="0" name="tp___mcdp_attribution_generated_column_name__channel_category:tp___mcdp_attribution_generated_column_name__event_type" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="h2hk345j815q8nlp8f04h1ceic"/>
+      <column comment="" key="false" length="0" name="marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="ac5a0gbv2quaavcmcm64e50kol"/>
+      <column comment="" key="false" length="0" name="conversionInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="4bk3jgf8nb9bqasps2eiqh9vmj"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderQuantityTotal_lastTouch" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="pbvr0lo7o865sr0qpgts11tbo8"/>
+      <column comment="" key="false" length="0" name="conv___mcdp_attribution_generated_column_name__order_orderTotal_marginal" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="6b7rqltleebd8gp0h3c3mkeg91"/>
+      <column comment="" key="false" length="0" name="touchpointInstances" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true" xmi:id="1lpavlpsruri0ghumevt6ejhsi"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1" xmi:id="_EcRKDw_1EeeKx_nV-ZIkvw">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" xmi:id="_EcRKEA_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1" xmi:id="_EcRKEQ_1EeeKx_nV-ZIkvw"/>
+  </connection>
+  <connection connectorName="FLOW" label="parquetWrite" lineStyle="0" metaname="parquetWrite" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFileOutputParquet_1" xmi:id="_EcRKEg_1EeeKx_nV-ZIkvw">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" xmi:id="_EcRKEw_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="parquetWrite" xmi:id="_EcRKFA_1EeeKx_nV-ZIkvw"/>
+  </connection>
+  <connection connectorName="FLOW" label="logwrite" lineStyle="0" metaname="logwrite" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tLogRow_1" xmi:id="_EcRKFQ_1EeeKx_nV-ZIkvw">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" xmi:id="_EcRKFg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="logwrite" xmi:id="_EcRKFw_1EeeKx_nV-ZIkvw"/>
+  </connection>
+  <subjob xmi:id="_EcRKGA_1EeeKx_nV-ZIkvw">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1" xmi:id="_EcRKGQ_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150" xmi:id="_EcRKGg_1EeeKx_nV-ZIkvw"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236" xmi:id="_EcRKGw_1EeeKx_nV-ZIkvw"/>
+  </subjob>
+</talendfile:ProcessType>
+
