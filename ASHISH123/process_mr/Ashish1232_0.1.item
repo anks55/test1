@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_ZXrGsBhDEeeFttmGpdsPLg" defaultContext="prod" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_ZXsU0BhDEeeFttmGpdsPLg" confirmationNeeded="false" name="prod"/>
+  <context xmi:id="_ZXsU0RhDEeeFttmGpdsPLg" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_ZXsU0hhDEeeFttmGpdsPLg" comment="" name="inputPath" prompt="inputPath?" promptNeeded="false" repositoryContextId="" type="id_String" value="&quot;c:/temp/names.csv&quot;"/>
+    <contextParameter xmi:id="_ZXsU0xhDEeeFttmGpdsPLg" comment="" name="outputPath" prompt="outputPath?" promptNeeded="false" repositoryContextId="" type="id_String" value="&quot;c:/temp/names.parquet&quot;"/>
+    <contextParameter xmi:id="_ZXsU1BhDEeeFttmGpdsPLg" comment="" name="inputSeperator" prompt="inputSeperator?" promptNeeded="false" repositoryContextId="" type="id_String" value="&quot;,&quot;"/>
+  </context>
+  <parameters xmi:id="_ZXsU1RhDEeeFttmGpdsPLg">
+    <routinesParameter xmi:id="_ZXsU1hhDEeeFttmGpdsPLg" id="_6XMHoBg2EeeYJLtmC9DLRw" name="DQTechnical"/>
+    <routinesParameter xmi:id="_ZXsU1xhDEeeFttmGpdsPLg" id="_6W6a0Bg2EeeYJLtmC9DLRw" name="DataMasking"/>
+    <routinesParameter xmi:id="_ZXsU2BhDEeeFttmGpdsPLg" id="_6Ws_cBg2EeeYJLtmC9DLRw" name="DataOperation"/>
+    <routinesParameter xmi:id="_ZXsU2RhDEeeFttmGpdsPLg" id="_6W9eIBg2EeeYJLtmC9DLRw" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_ZXsU2hhDEeeFttmGpdsPLg" id="_6XAhcBg2EeeYJLtmC9DLRw" name="DataQuality"/>
+    <routinesParameter xmi:id="_ZXsU2xhDEeeFttmGpdsPLg" id="_6XHPIBg2EeeYJLtmC9DLRw" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_ZXsU3BhDEeeFttmGpdsPLg" id="_6WmRwBg2EeeYJLtmC9DLRw" name="Mathematical"/>
+    <routinesParameter xmi:id="_ZXsU3RhDEeeFttmGpdsPLg" id="_6WwCwBg2EeeYJLtmC9DLRw" name="Numeric"/>
+    <routinesParameter xmi:id="_ZXsU3hhDEeeFttmGpdsPLg" id="_6WcgwBg2EeeYJLtmC9DLRw" name="Relational"/>
+    <routinesParameter xmi:id="_ZXsU3xhDEeeFttmGpdsPLg" id="_6W07QBg2EeeYJLtmC9DLRw" name="SQLike"/>
+    <routinesParameter xmi:id="_ZXsU4BhDEeeFttmGpdsPLg" id="_6WaEgBg2EeeYJLtmC9DLRw" name="StringHandling"/>
+    <routinesParameter xmi:id="_ZXsU4RhDEeeFttmGpdsPLg" id="_6VISIBg2EeeYJLtmC9DLRw" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_ZXsU4hhDEeeFttmGpdsPLg" id="_6WeV8Bg2EeeYJLtmC9DLRw" name="TalendDate"/>
+    <routinesParameter xmi:id="_ZXsU4xhDEeeFttmGpdsPLg" id="_6Wp8IBg2EeeYJLtmC9DLRw" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_ZXsU5BhDEeeFttmGpdsPLg" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_ZXsU5RhDEeeFttmGpdsPLg" field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+  </node>
+  <node xmi:id="_ZXsU5hhDEeeFttmGpdsPLg" componentName="tLogRow" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_ZXsU5xhDEeeFttmGpdsPLg" field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
+    <elementParameter xmi:id="_ZXsU6BhDEeeFttmGpdsPLg" name="BASIC_MODE" value="true"/>
+    <elementParameter xmi:id="_ZXsU6RhDEeeFttmGpdsPLg" name="TABLE_PRINT" value="false"/>
+    <elementParameter xmi:id="_ZXsU6hhDEeeFttmGpdsPLg" name="VERTICAL" value="false"/>
+    <elementParameter xmi:id="_ZXsU6xhDEeeFttmGpdsPLg" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter xmi:id="_ZXsU7BhDEeeFttmGpdsPLg" name="PRINT_LABEL" value="false"/>
+    <elementParameter xmi:id="_ZXsU7RhDEeeFttmGpdsPLg" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter xmi:id="_ZXsU7hhDEeeFttmGpdsPLg" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter xmi:id="_ZXsU7xhDEeeFttmGpdsPLg" name="PRINT_HEADER" value="true"/>
+    <elementParameter xmi:id="_ZXsU8BhDEeeFttmGpdsPLg" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter xmi:id="_ZXs74BhDEeeFttmGpdsPLg" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter xmi:id="_ZXs74RhDEeeFttmGpdsPLg" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter xmi:id="_ZXs74hhDEeeFttmGpdsPLg" name="LENGTHS">
+      <elementValue xmi:id="_ZXs74xhDEeeFttmGpdsPLg" elementRef="SCHEMA_COLUMN" value="model_id"/>
+      <elementValue xmi:id="_ZXs75BhDEeeFttmGpdsPLg" elementRef="LENGTH" value="10"/>
+      <elementValue xmi:id="_ZXs75RhDEeeFttmGpdsPLg" elementRef="SCHEMA_COLUMN" value="model_name"/>
+      <elementValue xmi:id="_ZXs75hhDEeeFttmGpdsPLg" elementRef="LENGTH" value="10"/>
+      <elementValue xmi:id="_ZXs75xhDEeeFttmGpdsPLg" elementRef="SCHEMA_COLUMN" value="model_phone"/>
+      <elementValue xmi:id="_ZXs76BhDEeeFttmGpdsPLg" elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter xmi:id="_ZXs76RhDEeeFttmGpdsPLg" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_ZXs76hhDEeeFttmGpdsPLg" connector="FLOW" name="tLogRow_1">
+      <column xmi:id="_ZXs76xhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs77BhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs77RhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_phone" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata xmi:id="_ZXs77hhDEeeFttmGpdsPLg" connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column xmi:id="_ZXs77xhDEeeFttmGpdsPLg" key="false" length="-1" name="model_id" nullable="false" precision="-1"/>
+    </metadata>
+  </node>
+  <node xmi:id="_ZXs78BhDEeeFttmGpdsPLg" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_ZXs78RhDEeeFttmGpdsPLg" field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+  </node>
+  <node xmi:id="_ZXs78hhDEeeFttmGpdsPLg" componentName="tLogRow" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_ZXs78xhDEeeFttmGpdsPLg" field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
+    <elementParameter xmi:id="_ZXs79BhDEeeFttmGpdsPLg" name="BASIC_MODE" value="true"/>
+    <elementParameter xmi:id="_ZXs79RhDEeeFttmGpdsPLg" name="TABLE_PRINT" value="false"/>
+    <elementParameter xmi:id="_ZXs79hhDEeeFttmGpdsPLg" name="VERTICAL" value="false"/>
+    <elementParameter xmi:id="_ZXs79xhDEeeFttmGpdsPLg" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter xmi:id="_ZXs7-BhDEeeFttmGpdsPLg" name="PRINT_LABEL" value="false"/>
+    <elementParameter xmi:id="_ZXs7-RhDEeeFttmGpdsPLg" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter xmi:id="_ZXs7-hhDEeeFttmGpdsPLg" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter xmi:id="_ZXs7-xhDEeeFttmGpdsPLg" name="PRINT_HEADER" value="true"/>
+    <elementParameter xmi:id="_ZXs7_BhDEeeFttmGpdsPLg" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter xmi:id="_ZXs7_RhDEeeFttmGpdsPLg" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter xmi:id="_ZXs7_hhDEeeFttmGpdsPLg" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter xmi:id="_ZXs7_xhDEeeFttmGpdsPLg" name="LENGTHS">
+      <elementValue xmi:id="_ZXs8ABhDEeeFttmGpdsPLg" elementRef="SCHEMA_COLUMN" value="model_id"/>
+      <elementValue xmi:id="_ZXs8ARhDEeeFttmGpdsPLg" elementRef="LENGTH" value="10"/>
+      <elementValue xmi:id="_ZXs8AhhDEeeFttmGpdsPLg" elementRef="SCHEMA_COLUMN" value="model_name"/>
+      <elementValue xmi:id="_ZXs8AxhDEeeFttmGpdsPLg" elementRef="LENGTH" value="10"/>
+      <elementValue xmi:id="_ZXs8BBhDEeeFttmGpdsPLg" elementRef="SCHEMA_COLUMN" value="model_phone"/>
+      <elementValue xmi:id="_ZXs8BRhDEeeFttmGpdsPLg" elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter xmi:id="_ZXs8BhhDEeeFttmGpdsPLg" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_ZXs8BxhDEeeFttmGpdsPLg" connector="FLOW" name="tLogRow_1">
+      <column xmi:id="_ZXs8CBhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs8CRhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs8ChhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_phone" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata xmi:id="_ZXs8CxhDEeeFttmGpdsPLg" connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column xmi:id="_ZXs8DBhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs8DRhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs8DhhDEeeFttmGpdsPLg" comment="" key="false" length="0" name="model_phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_ZXs8DxhDEeeFttmGpdsPLg" comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="-1"/>
+    </metadata>
+  </node>
+</talendfile:ProcessType>
