@@ -1,0 +1,231 @@
+SCRIPT_VERSION=4.2,
+JobType= Big_Data_Batch,
+Framework= Spark,
+DEFAULT_CONTEXT: Default,
+ContextType {
+	NAME: Default
+	addContextParameter {
+		NAME: inputPath,
+		TYPE: id_String,
+		VALUE: "\"c:/temp/names.csv\"",
+		COMMENT: "",
+		PROMPT: "inputPath?",
+		REPOSITORYCONTEXTID: "contextinput"
+	}
+	addContextParameter {
+		NAME: outputPath,
+		TYPE: id_String,
+		VALUE: "\"c:/temp/names.parquet\"",
+		COMMENT: "",
+		PROMPT: "outputPath?",
+		REPOSITORYCONTEXTID: "contextinput"
+	}
+	addContextParameter {
+		NAME: inputSeperator,
+		TYPE: id_String,
+		VALUE: "\",\"",
+		COMMENT: "",
+		PROMPT: "inputSeperator?",
+		REPOSITORYCONTEXTID: "contextinput"
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tFileInputDelimited",
+		NAME: "tFileInputDelimited_1",
+		POSITION: 224, 160,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	addSchema {
+		NAME: "tFileInputDelimited_1",
+		CONNECTOR: "FLOW",
+		LABEL: "metadata"
+		addColumn {
+			NAME: "id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+	addSchema {
+		NAME: "REJECT",
+		CONNECTOR: "REJECT",
+		LABEL: "metadata"
+		addColumn {
+			NAME: "id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "errorCode",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "errorMessage",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "inputLine",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+	addSchema {
+		NAME: "INTERMEDIATE",
+		CONNECTOR: "INTERMEDIATE"
+		addColumn {
+			NAME: "line",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tLogRow",
+		NAME: "tLogRow_1",
+		POSITION: 768, 160,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	addSchema {
+		NAME: "tLogRow_1",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+	addSchema {
+		NAME: "VALIDATION_REJECT",
+		CONNECTOR: "VALIDATION_REJECT"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "errorMessage",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+}
