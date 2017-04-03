@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_2cYrsBhGEeeriuQM0MvO8w" defaultContext="Default" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_2cYrsRhGEeeriuQM0MvO8w" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_2cYrshhGEeeriuQM0MvO8w" comment="" name="inputPath" prompt="inputPath?" promptNeeded="false" repositoryContextId="" type="id_String" value="&quot;c:/temp/names.csv&quot;"/>
+    <contextParameter xmi:id="_2cYrsxhGEeeriuQM0MvO8w" comment="" name="outputPath" prompt="outputPath?" promptNeeded="false" repositoryContextId="" type="id_String" value="&quot;c:/temp/names.parquet&quot;"/>
+    <contextParameter xmi:id="_2cYrtBhGEeeriuQM0MvO8w" comment="" name="inputSeperator" prompt="inputSeperator?" promptNeeded="false" repositoryContextId="" type="id_String" value="&quot;,&quot;"/>
+  </context>
+  <parameters xmi:id="_2cYrtRhGEeeriuQM0MvO8w">
+    <routinesParameter xmi:id="_2cYrthhGEeeriuQM0MvO8w" id="_6XMHoBg2EeeYJLtmC9DLRw" name="DQTechnical"/>
+    <routinesParameter xmi:id="_2cYrtxhGEeeriuQM0MvO8w" id="_6W6a0Bg2EeeYJLtmC9DLRw" name="DataMasking"/>
+    <routinesParameter xmi:id="_2cYruBhGEeeriuQM0MvO8w" id="_6Ws_cBg2EeeYJLtmC9DLRw" name="DataOperation"/>
+    <routinesParameter xmi:id="_2cYruRhGEeeriuQM0MvO8w" id="_6W9eIBg2EeeYJLtmC9DLRw" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_2cYruhhGEeeriuQM0MvO8w" id="_6XAhcBg2EeeYJLtmC9DLRw" name="DataQuality"/>
+    <routinesParameter xmi:id="_2cYruxhGEeeriuQM0MvO8w" id="_6XHPIBg2EeeYJLtmC9DLRw" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_2cYrvBhGEeeriuQM0MvO8w" id="_6WmRwBg2EeeYJLtmC9DLRw" name="Mathematical"/>
+    <routinesParameter xmi:id="_2cYrvRhGEeeriuQM0MvO8w" id="_6WwCwBg2EeeYJLtmC9DLRw" name="Numeric"/>
+    <routinesParameter xmi:id="_2cYrvhhGEeeriuQM0MvO8w" id="_6WcgwBg2EeeYJLtmC9DLRw" name="Relational"/>
+    <routinesParameter xmi:id="_2cYrvxhGEeeriuQM0MvO8w" id="_6W07QBg2EeeYJLtmC9DLRw" name="SQLike"/>
+    <routinesParameter xmi:id="_2cYrwBhGEeeriuQM0MvO8w" id="_6WaEgBg2EeeYJLtmC9DLRw" name="StringHandling"/>
+    <routinesParameter xmi:id="_2cYrwRhGEeeriuQM0MvO8w" id="_6VISIBg2EeeYJLtmC9DLRw" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_2cYrwhhGEeeriuQM0MvO8w" id="_6WeV8Bg2EeeYJLtmC9DLRw" name="TalendDate"/>
+    <routinesParameter xmi:id="_2cYrwxhGEeeriuQM0MvO8w" id="_6Wp8IBg2EeeYJLtmC9DLRw" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_2cYrxBhGEeeriuQM0MvO8w" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_2cYrxRhGEeeriuQM0MvO8w" field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+  </node>
+  <node xmi:id="_2cYrxhhGEeeriuQM0MvO8w" componentName="tLogRow" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_2cYrxxhGEeeriuQM0MvO8w" field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
+    <elementParameter xmi:id="_2cYryBhGEeeriuQM0MvO8w" name="BASIC_MODE" value="true"/>
+    <elementParameter xmi:id="_2cYryRhGEeeriuQM0MvO8w" name="TABLE_PRINT" value="false"/>
+    <elementParameter xmi:id="_2cYryhhGEeeriuQM0MvO8w" name="VERTICAL" value="false"/>
+    <elementParameter xmi:id="_2cYryxhGEeeriuQM0MvO8w" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter xmi:id="_2cYrzBhGEeeriuQM0MvO8w" name="PRINT_LABEL" value="false"/>
+    <elementParameter xmi:id="_2cYrzRhGEeeriuQM0MvO8w" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter xmi:id="_2cYrzhhGEeeriuQM0MvO8w" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter xmi:id="_2cYrzxhGEeeriuQM0MvO8w" name="PRINT_HEADER" value="true"/>
+    <elementParameter xmi:id="_2cYr0BhGEeeriuQM0MvO8w" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter xmi:id="_2cYr0RhGEeeriuQM0MvO8w" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter xmi:id="_2cYr0hhGEeeriuQM0MvO8w" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter xmi:id="_2cYr0xhGEeeriuQM0MvO8w" name="LENGTHS">
+      <elementValue xmi:id="_2cYr1BhGEeeriuQM0MvO8w" elementRef="SCHEMA_COLUMN" value="model_id"/>
+      <elementValue xmi:id="_2cYr1RhGEeeriuQM0MvO8w" elementRef="LENGTH" value="10"/>
+      <elementValue xmi:id="_2cYr1hhGEeeriuQM0MvO8w" elementRef="SCHEMA_COLUMN" value="model_name"/>
+      <elementValue xmi:id="_2cYr1xhGEeeriuQM0MvO8w" elementRef="LENGTH" value="10"/>
+      <elementValue xmi:id="_2cYr2BhGEeeriuQM0MvO8w" elementRef="SCHEMA_COLUMN" value="model_phone"/>
+      <elementValue xmi:id="_2cYr2RhGEeeriuQM0MvO8w" elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter xmi:id="_2cYr2hhGEeeriuQM0MvO8w" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_2cYr2xhGEeeriuQM0MvO8w" connector="FLOW" name="tLogRow_1">
+      <column xmi:id="_2cYr3BhGEeeriuQM0MvO8w" comment="" key="false" length="0" name="model_id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_2cYr3RhGEeeriuQM0MvO8w" comment="" key="false" length="0" name="model_name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_2cYr3hhGEeeriuQM0MvO8w" comment="" key="false" length="0" name="model_phone" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata xmi:id="_2cYr3xhGEeeriuQM0MvO8w" connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column xmi:id="_2cYr4BhGEeeriuQM0MvO8w" comment="" key="false" length="0" name="model_id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_2cYr4RhGEeeriuQM0MvO8w" comment="" key="false" length="0" name="model_name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_2cYr4hhGEeeriuQM0MvO8w" comment="" key="false" length="0" name="model_phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_2cYr4xhGEeeriuQM0MvO8w" comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="-1"/>
+    </metadata>
+  </node>
+</talendfile:ProcessType>
