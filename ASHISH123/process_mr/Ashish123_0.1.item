@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_IWScoBngEeen2ORxTpPBqQ" defaultContext="prod" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_IWScoRngEeen2ORxTpPBqQ" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_IWScohngEeen2ORxTpPBqQ" comment="Input path for reading the file." name="awsCreds" prompt="awsCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+    <contextParameter xmi:id="_IWScoxngEeen2ORxTpPBqQ" comment="Input path for reading the file." name="azureCreds" prompt="azureCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+  </context>
+  <context xmi:id="_IWScpBngEeen2ORxTpPBqQ" confirmationNeeded="false" name="sandbox">
+    <contextParameter xmi:id="_IWScpRngEeen2ORxTpPBqQ" comment="Input path for reading the file." name="awsCreds" prompt="awsCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+    <contextParameter xmi:id="_IWScphngEeen2ORxTpPBqQ" comment="Input path for reading the file." name="azureCreds" prompt="azureCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+  </context>
+  <context xmi:id="_IWScpxngEeen2ORxTpPBqQ" confirmationNeeded="false" name="local">
+    <contextParameter xmi:id="_IWScqBngEeen2ORxTpPBqQ" comment="Input path for reading the file." name="awsCreds" prompt="awsCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+    <contextParameter xmi:id="_IWScqRngEeen2ORxTpPBqQ" comment="Input path for reading the file." name="azureCreds" prompt="azureCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+  </context>
+  <parameters xmi:id="_IWScqhngEeen2ORxTpPBqQ">
+    <routinesParameter xmi:id="_IWScqxngEeen2ORxTpPBqQ" id="_6XMHoBg2EeeYJLtmC9DLRw" name="DQTechnical"/>
+    <routinesParameter xmi:id="_IWScrBngEeen2ORxTpPBqQ" id="_6W6a0Bg2EeeYJLtmC9DLRw" name="DataMasking"/>
+    <routinesParameter xmi:id="_IWScrRngEeen2ORxTpPBqQ" id="_6Ws_cBg2EeeYJLtmC9DLRw" name="DataOperation"/>
+    <routinesParameter xmi:id="_IWScrhngEeen2ORxTpPBqQ" id="_6W9eIBg2EeeYJLtmC9DLRw" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_IWScrxngEeen2ORxTpPBqQ" id="_6XAhcBg2EeeYJLtmC9DLRw" name="DataQuality"/>
+    <routinesParameter xmi:id="_IWScsBngEeen2ORxTpPBqQ" id="_6XHPIBg2EeeYJLtmC9DLRw" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_IWScsRngEeen2ORxTpPBqQ" id="_6WmRwBg2EeeYJLtmC9DLRw" name="Mathematical"/>
+    <routinesParameter xmi:id="_IWScshngEeen2ORxTpPBqQ" id="_6WwCwBg2EeeYJLtmC9DLRw" name="Numeric"/>
+    <routinesParameter xmi:id="_IWScsxngEeen2ORxTpPBqQ" id="_6WcgwBg2EeeYJLtmC9DLRw" name="Relational"/>
+    <routinesParameter xmi:id="_IWSctBngEeen2ORxTpPBqQ" id="_6W07QBg2EeeYJLtmC9DLRw" name="SQLike"/>
+    <routinesParameter xmi:id="_IWSctRngEeen2ORxTpPBqQ" id="_6WaEgBg2EeeYJLtmC9DLRw" name="StringHandling"/>
+    <routinesParameter xmi:id="_IWScthngEeen2ORxTpPBqQ" id="_6VISIBg2EeeYJLtmC9DLRw" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_IWSctxngEeen2ORxTpPBqQ" id="_6WeV8Bg2EeeYJLtmC9DLRw" name="TalendDate"/>
+    <routinesParameter xmi:id="_IWScuBngEeen2ORxTpPBqQ" id="_6Wp8IBg2EeeYJLtmC9DLRw" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_IWScuRngEeen2ORxTpPBqQ" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_IWScuhngEeen2ORxTpPBqQ" field="TEXT" name="UNIQUE_NAME" value="Raw default for AAM Alias"/>
+  </node>
+</talendfile:ProcessType>
