@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_8Ro_MBoEEeeFW6VTL4Mf7A" defaultContext="prod" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_8Ro_MRoEEeeFW6VTL4Mf7A" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_8Ro_MhoEEeeFW6VTL4Mf7A" comment="" name="inputPath" prompt="inputPath?" promptNeeded="false" type="id_String" value="&quot;c:/temp/names.csv&quot;"/>
+    <contextParameter xmi:id="_8Ro_MxoEEeeFW6VTL4Mf7A" comment="" name="outputPath" prompt="outputPath?" promptNeeded="false" type="id_String" value="&quot;c:/temp/names.parquet&quot;"/>
+    <contextParameter xmi:id="_8Ro_NBoEEeeFW6VTL4Mf7A" comment="" name="inputSeperator" prompt="inputSeperator?" promptNeeded="false" type="id_String" value="&quot;,&quot;"/>
+  </context>
+  <context xmi:id="_8Ro_NRoEEeeFW6VTL4Mf7A" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_8Ro_NhoEEeeFW6VTL4Mf7A" comment="" name="inputPath" prompt="inputPath?" promptNeeded="false" type="id_String" value="&quot;c:/temp/names.csv&quot;"/>
+    <contextParameter xmi:id="_8Ro_NxoEEeeFW6VTL4Mf7A" comment="" name="outputPath" prompt="outputPath?" promptNeeded="false" type="id_String" value="&quot;c:/temp/names.parquet&quot;"/>
+    <contextParameter xmi:id="_8Ro_OBoEEeeFW6VTL4Mf7A" comment="" name="inputSeperator" prompt="inputSeperator?" promptNeeded="false" type="id_String" value="&quot;,&quot;"/>
+  </context>
+  <parameters xmi:id="_8Ro_ORoEEeeFW6VTL4Mf7A">
+    <routinesParameter xmi:id="_8Ro_OhoEEeeFW6VTL4Mf7A" id="_iDFpoBnuEeesheNoKfa3Yg" name="DQTechnical"/>
+    <routinesParameter xmi:id="_8Ro_OxoEEeeFW6VTL4Mf7A" id="_h9szUBnuEeesheNoKfa3Yg" name="DataMasking"/>
+    <routinesParameter xmi:id="_8Ro_PBoEEeeFW6VTL4Mf7A" id="_h79t8BnuEeesheNoKfa3Yg" name="DataOperation"/>
+    <routinesParameter xmi:id="_8Ro_PRoEEeeFW6VTL4Mf7A" id="_h92kUBnuEeesheNoKfa3Yg" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_8Ro_PhoEEeeFW6VTL4Mf7A" id="_h__5YBnuEeesheNoKfa3Yg" name="DataQuality"/>
+    <routinesParameter xmi:id="_8Ro_PxoEEeeFW6VTL4Mf7A" id="_iCudQBnuEeesheNoKfa3Yg" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_8Ro_QBoEEeeFW6VTL4Mf7A" id="_h7soMBnuEeesheNoKfa3Yg" name="Mathematical"/>
+    <routinesParameter xmi:id="_8Ro_QRoEEeeFW6VTL4Mf7A" id="_h9SjoBnuEeesheNoKfa3Yg" name="Numeric"/>
+    <routinesParameter xmi:id="_8Ro_QhoEEeeFW6VTL4Mf7A" id="_h7IngBnuEeesheNoKfa3Yg" name="Relational"/>
+    <routinesParameter xmi:id="_8Ro_QxoEEeeFW6VTL4Mf7A" id="_h9lekBnuEeesheNoKfa3Yg" name="SQLike"/>
+    <routinesParameter xmi:id="_8Ro_RBoEEeeFW6VTL4Mf7A" id="_h7AEoBnuEeesheNoKfa3Yg" name="StringHandling"/>
+    <routinesParameter xmi:id="_8Ro_RRoEEeeFW6VTL4Mf7A" id="_h0GLYBnuEeesheNoKfa3Yg" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_8Ro_RhoEEeeFW6VTL4Mf7A" id="_h7Wp8BnuEeesheNoKfa3Yg" name="TalendDate"/>
+    <routinesParameter xmi:id="_8Ro_RxoEEeeFW6VTL4Mf7A" id="_h71yIBnuEeesheNoKfa3Yg" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_8Ro_SBoEEeeFW6VTL4Mf7A" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_8Ro_SRoEEeeFW6VTL4Mf7A" field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter xmi:id="_8Ro_ShoEEeeFW6VTL4Mf7A" name="DEFINE_STORAGE_CONFIGURATION" value="false"/>
+    <elementParameter xmi:id="_8Ro_SxoEEeeFW6VTL4Mf7A" name="FIELD" value="line"/>
+    <elementParameter xmi:id="_8Ro_TBoEEeeFW6VTL4Mf7A" name="FILENAME" value="context.inputPath"/>
+    <elementParameter xmi:id="_8Ro_TRoEEeeFW6VTL4Mf7A" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter xmi:id="_8Ro_ThoEEeeFW6VTL4Mf7A" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter xmi:id="_8Ro_TxoEEeeFW6VTL4Mf7A" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter xmi:id="_8Ro_UBoEEeeFW6VTL4Mf7A" name="FIELDSEPARATOR" value="context.inputSeperator"/>
+    <elementParameter xmi:id="_8Ro_URoEEeeFW6VTL4Mf7A" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter xmi:id="_8Ro_UhoEEeeFW6VTL4Mf7A" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter xmi:id="_8Ro_UxoEEeeFW6VTL4Mf7A" name="CSV_OPTION" value="false"/>
+    <elementParameter xmi:id="_8Ro_VBoEEeeFW6VTL4Mf7A" name="HEADER" value="0"/>
+    <elementParameter xmi:id="_8Ro_VRoEEeeFW6VTL4Mf7A" name="REMOVE_EMPTY_ROW" value="false"/>
+    <elementParameter xmi:id="_8Ro_VhoEEeeFW6VTL4Mf7A" name="USE_MIN_PARTITIONS" value="false"/>
+    <elementParameter xmi:id="_8Ro_VxoEEeeFW6VTL4Mf7A" name="MIN_PARTITIONS" value="2"/>
+    <elementParameter xmi:id="_8Ro_WBoEEeeFW6VTL4Mf7A" name="CUSTOM_ENCODING" value="false"/>
+    <elementParameter xmi:id="_8Ro_WRoEEeeFW6VTL4Mf7A" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter xmi:id="_8Ro_WhoEEeeFW6VTL4Mf7A" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter xmi:id="_8Ro_WxoEEeeFW6VTL4Mf7A" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter xmi:id="_8Ro_XBoEEeeFW6VTL4Mf7A" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter xmi:id="_8Ro_XRoEEeeFW6VTL4Mf7A" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter xmi:id="_8Ro_XhoEEeeFW6VTL4Mf7A" name="TRIMALL" value="false"/>
+    <elementParameter xmi:id="_8Ro_XxoEEeeFW6VTL4Mf7A" name="TRIMSELECT">
+      <elementValue xmi:id="_8Ro_YBoEEeeFW6VTL4Mf7A" elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue xmi:id="_8Ro_YRoEEeeFW6VTL4Mf7A" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_8Ro_YhoEEeeFW6VTL4Mf7A" elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue xmi:id="_8Ro_YxoEEeeFW6VTL4Mf7A" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_8Ro_ZBoEEeeFW6VTL4Mf7A" elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue xmi:id="_8Ro_ZRoEEeeFW6VTL4Mf7A" elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter xmi:id="_8Ro_ZhoEEeeFW6VTL4Mf7A" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter xmi:id="_8Ro_ZxoEEeeFW6VTL4Mf7A" name="CHECK_DATE" value="false"/>
+    <elementParameter xmi:id="_8Ro_aBoEEeeFW6VTL4Mf7A" name="ENABLE_DECODE" value="false"/>
+    <elementParameter xmi:id="_8Ro_aRoEEeeFW6VTL4Mf7A" name="DECODE_COLS">
+      <elementValue xmi:id="_8Ro_ahoEEeeFW6VTL4Mf7A" elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue xmi:id="_8Ro_axoEEeeFW6VTL4Mf7A" elementRef="DECODE" value="false"/>
+      <elementValue xmi:id="_8Ro_bBoEEeeFW6VTL4Mf7A" elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue xmi:id="_8Ro_bRoEEeeFW6VTL4Mf7A" elementRef="DECODE" value="false"/>
+      <elementValue xmi:id="_8Ro_bhoEEeeFW6VTL4Mf7A" elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue xmi:id="_8Ro_bxoEEeeFW6VTL4Mf7A" elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter xmi:id="_8Ro_cBoEEeeFW6VTL4Mf7A" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_8Ro_cRoEEeeFW6VTL4Mf7A" connector="FLOW" label="metadata" name="tFileInputDelimited_1">
+      <column xmi:id="_8Ro_choEEeeFW6VTL4Mf7A" comment="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_8Ro_cxoEEeeFW6VTL4Mf7A" comment="" key="false" length="0" name="name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_8Ro_dBoEEeeFW6VTL4Mf7A" comment="" key="false" length="0" name="phone" nullable="true" pattern="" precision="0" type="id_String"/>
+    </metadata>
+    <metadata xmi:id="_8Ro_dRoEEeeFW6VTL4Mf7A" connector="REJECT" label="metadata" name="REJECT">
+      <column xmi:id="_8Ro_dhoEEeeFW6VTL4Mf7A" comment="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_8Ro_dxoEEeeFW6VTL4Mf7A" comment="" key="false" length="0" name="name" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_8Ro_eBoEEeeFW6VTL4Mf7A" comment="" key="false" length="0" name="phone" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column xmi:id="_8Ro_eRoEEeeFW6VTL4Mf7A" defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1"/>
+      <column xmi:id="_8Ro_ehoEEeeFW6VTL4Mf7A" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1"/>
+      <column xmi:id="_8Ro_exoEEeeFW6VTL4Mf7A" defaultValue="" key="false" length="255" name="inputLine" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1"/>
+    </metadata>
+    <metadata xmi:id="_8Ro_fBoEEeeFW6VTL4Mf7A" connector="INTERMEDIATE" name="INTERMEDIATE">
+      <column xmi:id="_8Ro_fRoEEeeFW6VTL4Mf7A" defaultValue="" key="false" length="255" name="line" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1"/>
+    </metadata>
+  </node>
+</talendfile:ProcessType>
