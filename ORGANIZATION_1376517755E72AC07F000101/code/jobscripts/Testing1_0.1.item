@@ -1,0 +1,870 @@
+SCRIPT_VERSION=4.2,
+JobType= Big_Data_Batch,
+Framework= Spark,
+DEFAULT_CONTEXT: prod,
+ContextType {
+	NAME: Default
+	addContextParameter {
+		NAME: inputPath,
+		TYPE: id_String,
+		VALUE: "\"c:/temp/names.csv\"",
+		COMMENT: "",
+		PROMPT: "inputPath?"
+	}
+	addContextParameter {
+		NAME: outputPath,
+		TYPE: id_String,
+		VALUE: "\"c:/temp/names.parquet\"",
+		COMMENT: "",
+		PROMPT: "outputPath?"
+	}
+	addContextParameter {
+		NAME: inputSeperator,
+		TYPE: id_String,
+		VALUE: "\",\"",
+		COMMENT: "",
+		PROMPT: "inputSeperator?"
+	}
+}
+ContextType {
+	NAME: prod
+	addContextParameter {
+		NAME: inputPath,
+		TYPE: id_String,
+		VALUE: "\"c:/temp/names.csv\"",
+		COMMENT: "",
+		PROMPT: "inputPath?"
+	}
+	addContextParameter {
+		NAME: outputPath,
+		TYPE: id_String,
+		VALUE: "\"c:/temp/names.parquet\"",
+		COMMENT: "",
+		PROMPT: "outputPath?"
+	}
+	addContextParameter {
+		NAME: inputSeperator,
+		TYPE: id_String,
+		VALUE: "\",\"",
+		COMMENT: "",
+		PROMPT: "inputSeperator?"
+	}
+}
+addParameters {
+	addElementParameters {
+		SCREEN_OFFSET_X : "0",
+		SCREEN_OFFSET_Y : "0",,,,,,,,,,,,,,,,
+		IMPLICITCONTEXT_USE_PROJECT_SETTINGS : "false",
+		STATANDLOG_USE_PROJECT_SETTINGS : "false",
+		MULTI_THREAD_EXECATION : "false",
+		PARALLELIZE_UNIT_SIZE : "25000",
+		IMPLICIT_TCONTEXTLOAD : "false",
+		FROM_FILE_FLAG_IMPLICIT_CONTEXT : "false",
+		FROM_DATABASE_FLAG_IMPLICIT_CONTEXT : "false",
+		IMPLICIT_TCONTEXTLOAD_FILE : "\"/home/ashish/workspace/in.csv\"",
+		FIELDSEPARATOR : "\";\"",,
+		DB_VERSION_IMPLICIT_CONTEXT : "ORACLE_11",
+		URL_IMPLICIT_CONTEXT : "\"\"",,
+		DRIVER_CLASS_IMPLICIT_CONTEXT : "\"\"",
+		HOST_IMPLICIT_CONTEXT : "\"\"",
+		PORT_IMPLICIT_CONTEXT : "\"\"",
+		DBNAME_IMPLICIT_CONTEXT : "\"\"",
+		LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT : "\"\"",
+		PROPERTIES_IMPLICIT_CONTEXT : "\"\"",
+		SCHEMA_DB_IMPLICIT_CONTEXT : "\"\"",
+		USER_IMPLICIT_CONTEXT : "\"\"",
+		PASS_IMPLICIT_CONTEXT : "0RMsyjmybrE=",
+		DBFILE_IMPLICIT_CONTEXT : "\"\"",
+		DBTABLE_IMPLICIT_CONTEXT : "\"\"",
+		QUERY_CONDITION_IMPLICIT_CONTEXT : "\"\"",
+		LOAD_NEW_VARIABLE : "Warning",
+		NOT_LOAD_OLD_VARIABLE : "Warning",
+		PRINT_OPERATIONS : "false",
+		DISABLE_ERROR : "false",
+		DISABLE_WARNINGS : "true",
+		DISABLE_INFO : "true",
+		ON_STATCATCHER_FLAG : "false",
+		ON_LOGCATCHER_FLAG : "false",
+		ON_METERCATCHER_FLAG : "false",
+		ON_CONSOLE_FLAG : "false",
+		ON_FILES_FLAG : "false",
+		FILE_PATH : "\"/home/ashish/workspace/.metadata\"",
+		FILENAME_STATS : "\"stats_file.txt\"",
+		FILENAME_LOGS : "\"logs_file.txt\"",
+		FILENAME_METTER : "\"meter_file.txt\"",
+		ENCODING : "ISO-8859-15",
+		ENCODING:ENCODING_TYPE : "ISO-8859-15",
+		ON_DATABASE_FLAG : "false",
+		DB_TYPE : "tJDBCOutput",
+		DB_VERSION : "ORACLE_11",
+		URL : "\"\"",,
+		DRIVER_CLASS : "\"\"",
+		HOST : "\"\"",
+		PORT : "\"\"",
+		DATASOURCE : "\"\"",
+		DBNAME : "\"\"",
+		LOCAL_SERVICE_NAME : "\"\"",
+		PROPERTIES : "\"\"",
+		SCHEMA_DB : "\"\"",
+		USER : "\"\"",
+		PASS : "0RMsyjmybrE=",
+		DBFILE : "\"\"",
+		TABLE_STATS : "\"\"",
+		TABLE_LOGS : "\"\"",
+		TABLE_METER : "\"\"",
+		CATCH_RUNTIME_ERRORS : "true",
+		CATCH_USER_ERRORS : "true",
+		CATCH_USER_WARNING : "true",
+		CATCH_REALTIME_STATS : "false",,
+		HEADER_ENABLED : "false",,,,,
+		FOOTER_ENABLED : "false",,,,
+		SPARK_LOCAL_MODE : "true",
+		SPARK_LOCAL_VERSION : "SPARK_2_0_0",
+		SPARK_VERSION : "EMR_5_0_0",,,
+		NOTE : "** The version of Spark must be 1.3.0 or later.",
+		SPARK_API_VERSION : "SPARK_200",
+		SPARK_MODE : "CLUSTER",
+		RESOURCE_MANAGER : "\"\"",
+		SET_SCHEDULER_ADDRESS : "false",
+		RESOURCEMANAGER_SCHEDULER_ADDRESS : "\"\"",
+		SET_JOBHISTORY_ADDRESS : "false",
+		JOBHISTORY_ADDRESS : "\"\"",
+		SET_STAGING_DIRECTORY : "false",
+		STAGING_DIRECTORY : "\"/user\"",
+		HDINSIGHT_ENDPOINT : "\"https://xxxx.azurehdinsight.net\"",
+		HDINSIGHT_USERNAME : "\"\"",
+		HDINSIGHT_PASSWORD : "0RMsyjmybrE=",
+		LIVY_HOST : "\"\"",
+		LIVY_PORT : "\"443\"",
+		LIVY_USERNAME : "\"\"",
+		HDINSIGHT_USERNAME : "\"\"",
+		HDINSIGHT_PASSWORD : "0RMsyjmybrE=",
+		WASB_HOST : "\"\"",
+		WASB_CONTAINER : "\"\"",
+		WASB_USERNAME : "\"\"",
+		WASB_PASSWORD : "0RMsyjmybrE=",
+		REMOTE_FOLDER : "\"\"",
+		SPARK_HOST : "\"spark://localhost:7077\"",
+		SPARK_HOME : "\"/usr/lib/spark\"",
+		DEFINE_HADOOP_HOME_DIR : "true",
+		HADOOP_HOME_DIR : "\"/usr/local/hadoop-2.7.1\"",
+		DEFINE_SPARK_DRIVER_HOST : "false",
+		SPARK_DRIVER_HOST : "\"127.0.0.1\"",
+		USE_KRB : "false",
+		RESOURCEMANAGER_PRINCIPAL : "\"yarn/_HOST@EXAMPLE.COM\"",
+		JOBHISTORY_PRINCIPAL : "\"mapred/_HOST@EXAMPLE.COM\"",
+		USE_KEYTAB : "false",
+		PRINCIPAL : "\"hdfs\"",
+		KEYTAB_PATH : "\"/tmp/hdfs.headless.keytab\"",
+		USERNAME : "\"\"",
+		USE_MAPRTICKET : "false",
+		MAPRTICKET_PASSWORD : "0RMsyjmybrE=",
+		MAPRTICKET_CLUSTER : "\"demo.mapr.com\"",
+		MAPRTICKET_DURATION : "86400L",
+		SET_MAPR_HOME_DIR : "false",
+		MAPR_HOME_DIR : "\"/opt/mapr\"",
+		SET_HADOOP_LOGIN : "false",
+		HADOOP_LOGIN : "\"kerberos\"",
+		ADVANCED_SETTINGS_CHECK : "false",
+		SPARK_DRIVER_MEM : "\"512m\"",
+		SPARK_DRIVER_CORES : "\"1\"",
+		SPARK_EXECUTOR_MEM : "\"512m\"",
+		SET_SPARK_EXECUTOR_MEM_OVERHEAD : "false",
+		SPARK_EXECUTOR_MEM_OVERHEAD : "\"384\"",
+		SPARK_EXECUTOR_CORES_CHECK : "false",
+		SPARK_EXECUTOR_CORES : "\"1\"",
+		SPARK_YARN_ALLOC_TYPE : "AUTO",
+		SPARK_EXECUTOR_INSTANCES : "\"2\"",
+		SPARK_YARN_DYN_INIT : "\"1\"",
+		SPARK_YARN_DYN_MIN : "\"0\"",
+		SPARK_YARN_DYN_MAX : "\"MAX\"",
+		WEB_UI_PORT_CHECK : "false",
+		WEB_UI_PORT : "\"4040\"",
+		SPARK_BROADCAST_FACTORY : "AUTO",
+		CUSTOMIZE_SPARK_SERIALIZER : "false",
+		SPARK_SERIALIZER : "\"org.apache.spark.serializer.KryoSerializer\"",
+		ENABLE_SPARK_EVENT_LOGGING : "false",
+		COMPRESS_SPARK_EVENT_LOGS : "false",
+		SPARK_EVENT_LOG_DIR : "\"hdfs://namenode:8020/user/spark/applicationHistory\"
+			",
+		SPARKHISTORY_ADDRESS : "\"sparkHistoryServer:18080\"",
+		USE_CLOUDERA_NAVIGATOR : "false",
+		CLOUDERA_NAVIGATOR_USERNAME : "\"username\"",
+		CLOUDERA_NAVIGATOR_PASSWORD : "PoLvNyVG2XWndNDdLn696A==",
+		CLOUDERA_NAVIGATOR_URL : "\"http://localhost:7187/api/v8/\"",
+		CLOUDERA_NAVIGATOR_METADATA_URL :
+		"\"http://localhost:7187/api/v8/metadata/plugin\"",
+		CLOUDERA_NAVIGATOR_CLIENT_URL : "\"http://localhost\"",
+		CLOUDERA_NAVIGATOR_AUTOCOMMIT : "false",
+		CLOUDERA_NAVIGATOR_DISABLE_SSL_VALIDATION : "false",
+		CLOUDERA_NAVIGATOR_DIE_ON_ERROR : "true",
+		USE_ATLAS : "false",
+		ATLAS_URL : "\"http://localhost:21000\"",
+		ATLAS_USERNAME : "\"admin\"",
+		ATLAS_PASSWORD : "0RMsyjmybrE=",
+		SET_ATLAS_APPLICATION_PROPERTIES : "false",
+		ATLAS_APPLICATION_PROPERTIES :
+		"\"/user/atlas/atlas-application.properties\"",
+		ATLAS_DIE_ON_ERROR : "false",
+		SPARK_SCRATCH_DIR : "\"/tmp\"",
+		USE_CHECKPOINT : "false",
+		CHECKPOINT_DIR : "\"file:///tmp/mycheckpoint\"",
+	}
+	addRoutinesParameters {
+		addRoutinesParameter {
+			NAME: "DQTechnical"
+		}
+		addRoutinesParameter {
+			NAME: "DataMasking"
+		}
+		addRoutinesParameter {
+			NAME: "DataOperation"
+		}
+		addRoutinesParameter {
+			NAME: "DataQualityDependencies"
+		}
+		addRoutinesParameter {
+			NAME: "DataQuality"
+		}
+		addRoutinesParameter {
+			NAME: "DqStringHandling"
+		}
+		addRoutinesParameter {
+			NAME: "Mathematical"
+		}
+		addRoutinesParameter {
+			NAME: "Numeric"
+		}
+		addRoutinesParameter {
+			NAME: "Relational"
+		}
+		addRoutinesParameter {
+			NAME: "SQLike"
+		}
+		addRoutinesParameter {
+			NAME: "StringHandling"
+		}
+		addRoutinesParameter {
+			NAME: "TalendDataGenerator"
+		}
+		addRoutinesParameter {
+			NAME: "TalendDate"
+		}
+		addRoutinesParameter {
+			NAME: "TalendString"
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tFileInputDelimited",
+		NAME: "tFileInputDelimited_1",
+		POSITION: 224, 160,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		DEFINE_STORAGE_CONFIGURATION : "false",,
+		FIELD : "line",
+		FILENAME : "context.inputPath",
+		DIE_ON_ERROR : "true",
+		ROWSEPARATOR : "\"\\n\"",
+		CSVROWSEPARATOR : "\"\\n\"",
+		FIELDSEPARATOR : "context.inputSeperator",
+		ESCAPE_CHAR : "\"\"\"",
+		TEXT_ENCLOSURE : "\"\"\"",
+		CSV_OPTION : "false",
+		HEADER : "0",
+		REMOVE_EMPTY_ROW : "false",
+		USE_MIN_PARTITIONS : "false",
+		MIN_PARTITIONS : "2",
+		CUSTOM_ENCODING : "false",
+		ENCODING : "\"UTF-8\"",
+		ENCODING:ENCODING_TYPE : "UTF-8",
+		ADVANCED_SEPARATOR : "false",
+		THOUSANDS_SEPARATOR : "\",\"",
+		DECIMAL_SEPARATOR : "\".\"",
+		TRIMALL : "false",
+		TRIMSELECT {
+			SCHEMA_COLUMN : "id",
+			TRIM : "false",
+			SCHEMA_COLUMN : "name",
+			TRIM : "false",
+			SCHEMA_COLUMN : "phone",
+			TRIM : "false"
+		},
+		CHECK_FIELDS_NUM : "false",
+		CHECK_DATE : "false",
+		ENABLE_DECODE : "false",
+		DECODE_COLS {
+			SCHEMA_COLUMN : "id",
+			DECODE : "false",
+			SCHEMA_COLUMN : "name",
+			DECODE : "false",
+			SCHEMA_COLUMN : "phone",
+			DECODE : "false"
+		},
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tFileInputDelimited_1",
+		CONNECTOR: "FLOW",
+		LABEL: "metadata"
+		addColumn {
+			NAME: "id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+	addSchema {
+		NAME: "REJECT",
+		CONNECTOR: "REJECT",
+		LABEL: "metadata"
+		addColumn {
+			NAME: "id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "errorCode",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "errorMessage",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "inputLine",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+	addSchema {
+		NAME: "INTERMEDIATE",
+		CONNECTOR: "INTERMEDIATE"
+		addColumn {
+			NAME: "line",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tMap",
+		NAME: "tMap_1",
+		POSITION: 480, 160,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {,
+		LINK_STYLE : "AUTO",
+		REPLICATED_JOIN : "false",
+		PREVIEW : "_pSnJ4AogEeeCV6f-kdhNlQ-tMap_1-PREVIEW.bmp",
+		LKUP_PARALLELIZE : "false",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "out1",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+	addSchema {
+		NAME: "out2",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+	addMapperData {
+		addUiProperties {
+			SHELLMAXIMIZED: false
+		}
+		addInputTable {
+			NAME: "row1",
+			SIZESTATE: INTERMEDIATE,
+			MATCHINGMODE: "UNIQUE_MATCH",
+			LOOKUPMODE: "LOAD_ONCE"
+			addColumn {
+				NAME: "id",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "name",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "phone",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+		}
+		addVarTable {
+			NAME: "Var",
+			SIZESTATE: INTERMEDIATE
+		}
+		addOutputTable {
+			ID: "",
+			NAME: "out1",
+			SIZESTATE: INTERMEDIATE
+			addColumn {
+				NAME: "model_id",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "row1.id "
+			}
+			addColumn {
+				NAME: "model_name",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "row1.name "
+			}
+			addColumn {
+				NAME: "model_phone",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "row1.phone "
+			}
+		}
+		addOutputTable {
+			ID: "",
+			NAME: "out2",
+			SIZESTATE: INTERMEDIATE
+			addColumn {
+				NAME: "model_id",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "row1.id "
+			}
+			addColumn {
+				NAME: "model_name",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "row1.name "
+			}
+			addColumn {
+				NAME: "model_phone",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "row1.phone "
+			}
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tLogRow",
+		NAME: "tLogRow_1",
+		POSITION: 768, 160,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		BASIC_MODE : "true",
+		TABLE_PRINT : "false",
+		VERTICAL : "false",
+		PRINT_UNIQUE : "true",
+		PRINT_LABEL : "false",
+		PRINT_UNIQUE_LABEL : "false",
+		FIELDSEPARATOR : "\"|\"",
+		PRINT_HEADER : "true",
+		PRINT_UNIQUE_NAME : "false",
+		PRINT_COLNAMES : "false",
+		USE_FIXED_LENGTH : "false",
+		LENGTHS {
+			SCHEMA_COLUMN : "model_id",
+			LENGTH : "10",
+			SCHEMA_COLUMN : "model_name",
+			LENGTH : "10",
+			SCHEMA_COLUMN : "model_phone",
+			LENGTH : "10"
+		},
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tLogRow_1",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+	addSchema {
+		NAME: "VALIDATION_REJECT",
+		CONNECTOR: "VALIDATION_REJECT"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "errorMessage",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tFileOutputParquet",
+		NAME: "tFileOutputParquet_1",
+		POSITION: 544, 320,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		DEFINE_STORAGE_CONFIGURATION : "false",,,
+		FILENAME : "context.outputPath",
+		FILE_ACTION : "CREATE",
+		COMPRESSION : "UNCOMPRESSED",
+		SPARK_CONFIGURATION : "tSparkConfiguration_1",
+		DEFINE_PARTITIONS : "false",,
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tFileOutputParquet_1",
+		CONNECTOR: "FLOW",
+		LABEL: "metadata"
+		addColumn {
+			NAME: "model_id",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_name",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+		addColumn {
+			NAME: "model_phone",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 0,
+			COMMENT: "",
+			PATTERN: "",
+			PRECISION: 0
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tJava",
+		NAME: "tJava_1",
+		POSITION: 192, 32,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		CODE : "System.out.println(System.currentTimeMillis());",,
+		IMPORT : "//import java.util.List;",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tJava_1",
+		CONNECTOR: "FLOW"
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tJava",
+		NAME: "tJava_2",
+		POSITION: 192, 416,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		CODE : "System.out.println(System.currentTimeMillis());",
+		CLASS_CODE : "// Here you can define any classes that you wish to use in with your custom code :
+// The input rdd is available as the 'rdd_cid' variable where cid is the name of the tJava component
+// The class of the input rdd is called \"rowXStruct\" where rowX is the name of the incoming connection to tJava component, this class has the input schema columns as attributes.
+// The output rdd is available as the 'outputrdd_cid' variable where cid is the name of the tJava component
+// The class of the output rdd is called 'RecordOut_cid' where cid is the name of the tJava component, this class has the output schema columns as attributes.
+// The java spark context is available as the variable \"ctx\"
+
+// Code Samples :
+
+// public static class DataFrameRowToRddObject implements org.apache.spark.api.java.function.Function<org.apache.spark.sql.Row, RecordOut_tJava_1> {
+//  @Override
+//  public RecordOut_tJava_1 call(org.apache.spark.sql.Row row){
+//        RecordOut_tJava_1 output = new RecordOut_tJava_1();
+//        output.col1 = (String) row.get(0);
+//        ...
+//        return output;
+//  }
+      ",
+		IMPORT : "//import java.util.List;",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tJava_2",
+		CONNECTOR: "FLOW"
+	}
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "row1",
+	LINESTYLE: 0,
+	METANAME: "tFileInputDelimited_1",
+	SOURCE: "tFileInputDelimited_1",
+	TARGET: "tMap_1",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false"
+}
+addConnection {
+	TYPE: "SUBJOB_OK",
+	NAME: "OnSubjobOk",
+	LINESTYLE: 1,
+	METANAME: "tFileInputDelimited_1",
+	SOURCE: "tFileInputDelimited_1",
+	TARGET: "tJava_2",
+	OFFSETLABEL: 0, 0,
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "out1",
+	LINESTYLE: 0,
+	METANAME: "out1",
+	OUTPUTID: 1,
+	SOURCE: "tMap_1",
+	TARGET: "tLogRow_1",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false",
+	TRACES_CONNECTION_FILTER {
+		TRACE_COLUMN : "model_phone",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : "",
+		TRACE_COLUMN : "name",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : "",
+		TRACE_COLUMN : "id",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : "",
+		TRACE_COLUMN : "model_name",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : "",
+		TRACE_COLUMN : "model_id",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : ""
+	}
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "out2",
+	LINESTYLE: 0,
+	METANAME: "out2",
+	OUTPUTID: 2,
+	SOURCE: "tMap_1",
+	TARGET: "tFileOutputParquet_1",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false",
+	TRACES_CONNECTION_FILTER {
+		TRACE_COLUMN : "model_name",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : "",
+		TRACE_COLUMN : "model_id",
+		TRACE_COLUMN_CHECKED : "true",
+		TRACE_COLUMN_CONDITION : ""
+	}
+}
+addConnection {
+	TYPE: "SUBJOB_OK",
+	NAME: "OnSubjobOk",
+	LINESTYLE: 1,
+	METANAME: "tJava_1",
+	SOURCE: "tJava_1",
+	TARGET: "tFileInputDelimited_1",
+	OFFSETLABEL: 0, 0,
+}
+addSubjob {
+	NAME: "tFileInputDelimited_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
+addSubjob {
+	NAME: "tJava_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
+addSubjob {
+	NAME: "tJava_2"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
