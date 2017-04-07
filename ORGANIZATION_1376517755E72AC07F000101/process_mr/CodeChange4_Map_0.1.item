@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_SNTekBtgEeen8OZwQng7zQ" defaultContext="prod" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_SNUFoBtgEeen8OZwQng7zQ" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_SNUFoRtgEeen8OZwQng7zQ" comment="Input path for reading the file." name="awsCreds" prompt="awsCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+    <contextParameter xmi:id="_SNUFohtgEeen8OZwQng7zQ" comment="Input path for reading the file." name="azureCreds" prompt="azureCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+  </context>
+  <context xmi:id="_SNUFoxtgEeen8OZwQng7zQ" confirmationNeeded="false" name="sandbox">
+    <contextParameter xmi:id="_SNUFpBtgEeen8OZwQng7zQ" comment="Input path for reading the file." name="awsCreds" prompt="awsCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+    <contextParameter xmi:id="_SNUFpRtgEeen8OZwQng7zQ" comment="Input path for reading the file." name="azureCreds" prompt="azureCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+  </context>
+  <context xmi:id="_SNUFphtgEeen8OZwQng7zQ" confirmationNeeded="false" name="local">
+    <contextParameter xmi:id="_SNUFpxtgEeen8OZwQng7zQ" comment="Input path for reading the file." name="awsCreds" prompt="awsCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+    <contextParameter xmi:id="_SNUFqBtgEeen8OZwQng7zQ" comment="Input path for reading the file." name="azureCreds" prompt="azureCreds?" promptNeeded="false" type="id_String" value="c:/temp/names.csv"/>
+  </context>
+  <parameters xmi:id="_SNUFqRtgEeen8OZwQng7zQ">
+    <routinesParameter xmi:id="_SNUFqhtgEeen8OZwQng7zQ" id="_iDFpoBnuEeesheNoKfa3Yg" name="DQTechnical"/>
+    <routinesParameter xmi:id="_SNUFqxtgEeen8OZwQng7zQ" id="_h9szUBnuEeesheNoKfa3Yg" name="DataMasking"/>
+    <routinesParameter xmi:id="_SNUFrBtgEeen8OZwQng7zQ" id="_h79t8BnuEeesheNoKfa3Yg" name="DataOperation"/>
+    <routinesParameter xmi:id="_SNUFrRtgEeen8OZwQng7zQ" id="_h92kUBnuEeesheNoKfa3Yg" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_SNUFrhtgEeen8OZwQng7zQ" id="_h__5YBnuEeesheNoKfa3Yg" name="DataQuality"/>
+    <routinesParameter xmi:id="_SNUFrxtgEeen8OZwQng7zQ" id="_iCudQBnuEeesheNoKfa3Yg" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_SNUFsBtgEeen8OZwQng7zQ" id="_h7soMBnuEeesheNoKfa3Yg" name="Mathematical"/>
+    <routinesParameter xmi:id="_SNUFsRtgEeen8OZwQng7zQ" id="_h9SjoBnuEeesheNoKfa3Yg" name="Numeric"/>
+    <routinesParameter xmi:id="_SNUFshtgEeen8OZwQng7zQ" id="_h7IngBnuEeesheNoKfa3Yg" name="Relational"/>
+    <routinesParameter xmi:id="_SNUFsxtgEeen8OZwQng7zQ" id="_h9lekBnuEeesheNoKfa3Yg" name="SQLike"/>
+    <routinesParameter xmi:id="_SNUFtBtgEeen8OZwQng7zQ" id="_h7AEoBnuEeesheNoKfa3Yg" name="StringHandling"/>
+    <routinesParameter xmi:id="_SNUFtRtgEeen8OZwQng7zQ" id="_h0GLYBnuEeesheNoKfa3Yg" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_SNUFthtgEeen8OZwQng7zQ" id="_h7Wp8BnuEeesheNoKfa3Yg" name="TalendDate"/>
+    <routinesParameter xmi:id="_SNUFtxtgEeen8OZwQng7zQ" id="_h71yIBnuEeesheNoKfa3Yg" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_SNUFuBtgEeen8OZwQng7zQ" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_SNUFuRtgEeen8OZwQng7zQ" field="TEXT" name="UNIQUE_NAME" value="Master default for AAM Alias"/>
+    <elementParameter xmi:id="_SNUFuhtgEeen8OZwQng7zQ" name="TRIMSELECT">
+      <elementValue xmi:id="_SNUFuxtgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="dpid"/>
+      <elementValue xmi:id="_SNUFvBtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_SNUFvRtgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="uuid"/>
+      <elementValue xmi:id="_SNUFvhtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_SNUFvxtgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="aamUuid"/>
+      <elementValue xmi:id="_SNUFwBtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_SNUFwRtgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="mcdp_capturedAt"/>
+      <elementValue xmi:id="_SNUFwhtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_SNUFwxtgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="mcdp_batch"/>
+      <elementValue xmi:id="_SNUFxBtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <metadata xmi:id="_SNUFxRtgEeen8OZwQng7zQ" connector="FLOW" label="Master default for AAM Alias" name="Master default for AAM Alias">
+      <column xmi:id="_SNUFxhtgEeen8OZwQng7zQ" comment="" key="false" length="0" name="dpid" nullable="true" pattern="," precision="0" type="id_String"/>
+      <column xmi:id="_SNUFxxtgEeen8OZwQng7zQ" comment="" key="false" length="0" name="uuid" nullable="true" pattern="," precision="0" type="id_String"/>
+      <column xmi:id="_SNUFyBtgEeen8OZwQng7zQ" comment="" key="false" length="0" name="aamUuid" nullable="true" pattern="," precision="0" type="id_String"/>
+      <column xmi:id="_SNUFyRtgEeen8OZwQng7zQ" comment="" key="false" length="0" name="mcdp_capturedAt" nullable="true" pattern="," precision="0" type="id_String"/>
+      <column xmi:id="_SNUFyhtgEeen8OZwQng7zQ" comment="" key="false" length="0" name="mcdp_batch" nullable="true" pattern="," precision="0" type="id_String"/>
+    </metadata>
+  </node>
+  <node xmi:id="_SNUFyxtgEeen8OZwQng7zQ" componentName="tMap" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_SNUFzBtgEeen8OZwQng7zQ" field="TEXT" name="UNIQUE_NAME" value="tMap1"/>
+  </node>
+  <node xmi:id="_SNUFzRtgEeen8OZwQng7zQ" componentName="tFileInputDelimited" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160" sizeX="32" sizeY="32">
+    <elementParameter xmi:id="_SNUFzhtgEeen8OZwQng7zQ" field="TEXT" name="UNIQUE_NAME" value="Raw default for AAM Alias"/>
+    <elementParameter xmi:id="_SNUFzxtgEeen8OZwQng7zQ" name="TRIMSELECT">
+      <elementValue xmi:id="_SNUF0BtgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="uuid"/>
+      <elementValue xmi:id="_SNUF0RtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+      <elementValue xmi:id="_SNUF0htgEeen8OZwQng7zQ" elementRef="SCHEMA_COLUMN" value="aamUuid"/>
+      <elementValue xmi:id="_SNUF0xtgEeen8OZwQng7zQ" elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <metadata xmi:id="_SNUF1BtgEeen8OZwQng7zQ" connector="FLOW" label="Raw default for AAM Alias" name="Raw default for AAM Alias">
+      <column xmi:id="_SNUF1RtgEeen8OZwQng7zQ" comment="" key="false" length="0" name="uuid" nullable="true" pattern="," precision="0" type="id_String"/>
+      <column xmi:id="_SNUF1htgEeen8OZwQng7zQ" comment="" key="false" length="0" name="aamUuid" nullable="true" pattern="," precision="0" type="id_String"/>
+    </metadata>
+  </node>
+</talendfile:ProcessType>
