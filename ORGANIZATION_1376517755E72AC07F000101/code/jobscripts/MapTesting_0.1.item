@@ -1,0 +1,199 @@
+SCRIPT_VERSION=4.2,
+JobType=Big_Data_Batch,
+Framework=Spark,
+DEFAULT_CONTEXT:prod,
+ContextType {
+NAME:prod
+addContextParameter {
+NAME:awsCreds,
+TYPE:id_String,
+VALUE:"c:/temp/names.csv",
+COMMENT:"Input path for reading the file.",
+PROMPT:"awsCreds?"
+}
+addContextParameter {
+NAME:azureCreds,
+TYPE:id_String,
+VALUE:"c:/temp/names.csv",
+COMMENT:"Input path for reading the file.",
+PROMPT:"azureCreds?"
+}
+}
+ContextType {
+NAME:sandbox
+addContextParameter {
+NAME:awsCreds,
+TYPE:id_String,
+VALUE:"c:/temp/names.csv",
+COMMENT:"Input path for reading the file.",
+PROMPT:"awsCreds?"
+}
+addContextParameter {
+NAME:azureCreds,
+TYPE:id_String,
+VALUE:"c:/temp/names.csv",
+COMMENT:"Input path for reading the file.",
+PROMPT:"azureCreds?"
+}
+}
+ContextType {
+NAME:local
+addContextParameter {
+NAME:awsCreds,
+TYPE:id_String,
+VALUE:"c:/temp/names.csv",
+COMMENT:"Input path for reading the file.",
+PROMPT:"awsCreds?"
+}
+addContextParameter {
+NAME:azureCreds,
+TYPE:id_String,
+VALUE:"c:/temp/names.csv",
+COMMENT:"Input path for reading the file.",
+PROMPT:"azureCreds?"
+}
+}
+addComponent {
+setComponentDefinition {
+TYPE:"tFileInputDelimited",
+NAME:"Master default for AAM Alias",
+POSITION:224,160,
+SIZE:32,32,
+OFFSETLABEL:0,0
+}
+setSettings {
+TRIMSELECT {
+SCHEMA_COLUMN:"dpid",
+TRIM:"false",
+SCHEMA_COLUMN:"uuid",
+TRIM:"false",
+SCHEMA_COLUMN:"aamUuid",
+TRIM:"false",
+SCHEMA_COLUMN:"mcdp_capturedAt",
+TRIM:"false",
+SCHEMA_COLUMN:"mcdp_batch",
+TRIM:"false"
+}
+}
+addSchema {
+NAME:"Master default for AAM Alias",
+CONNECTOR:"FLOW",
+LABEL:"Master default for AAM Alias"
+addColumn {
+NAME:"dpid",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+addColumn {
+NAME:"uuid",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+addColumn {
+NAME:"aamUuid",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+addColumn {
+NAME:"mcdp_capturedAt",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+addColumn {
+NAME:"mcdp_batch",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+}
+}
+addComponent {
+setComponentDefinition {
+TYPE:"tMap",
+NAME:"tMap1",
+POSITION:224,160,
+SIZE:32,32,
+OFFSETLABEL:0,0
+}
+setSettings {
+}
+}
+addComponent {
+setComponentDefinition {
+TYPE:"tFileInputDelimited",
+NAME:"Raw default for AAM Alias",
+POSITION:224,160,
+SIZE:32,32,
+OFFSETLABEL:0,0
+}
+setSettings {
+TRIMSELECT {
+SCHEMA_COLUMN:"uuid",
+TRIM:"false",
+SCHEMA_COLUMN:"aamUuid",
+TRIM:"false"
+}
+}
+addSchema {
+NAME:"Raw default for AAM Alias",
+CONNECTOR:"FLOW",
+LABEL:"Raw default for AAM Alias"
+addColumn {
+NAME:"uuid",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+addColumn {
+NAME:"aamUuid",
+TYPE:"id_String",
+NULLABLE:true,
+LENGTH:0,
+COMMENT:"",
+PATTERN:",",
+PRECISION:0
+}
+}
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "row1",
+	LINESTYLE: 0,
+	METANAME: "Raw default for AAM Alias",
+	SOURCE: "Raw default for AAM Alias",
+	TARGET: "tMap1",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false"
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "test1",
+	LINESTYLE: 0,
+	METANAME: "Master default for AAM Alias",
+	SOURCE: "tMap1",
+	TARGET: "Master default for AAM Alias",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false"
+}
